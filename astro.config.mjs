@@ -1,15 +1,18 @@
-// @ts-check
+
+ // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-const isDev = import.meta.env.DEV;
-
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://emasuriano.github.io',
-  base: isDev ? '' : process.env.PAGES_BASE || 'astro-frame-shift',
+  site: 'https://herzens-werke.com',
+  base: '/',
   prefetch: { defaultStrategy: 'viewport' },
-  vite: { plugins: [tailwindcss()] },
+  vite: {
+    plugins: [tailwindcss()],
+  },
   // Authorizing remote images https://images.unsplash.com/
-  image: { remotePatterns: [{ protocol: 'https' }] },
+  image: {
+    remotePatterns: [{ protocol: 'https' }],
+  },
 });
