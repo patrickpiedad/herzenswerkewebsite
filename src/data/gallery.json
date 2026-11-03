@@ -5,8 +5,7 @@
     "title": "Blue Fluid Trails",
     "description": "Close-up of fluid acrylic pour art: thin cyan and white trails curve across a dark field, with tiny white specks that read like glitter or distant stars.",
     "categories": [
-      "Art",
-      "Space"
+      "Art"    
     ],
     "date": "2024-03-15",
     "photographer": "Solen Feyissa",
@@ -18,9 +17,7 @@
     "title": "Chicago Skyline at Sunset",
     "description": "High-angle photograph of downtown Chicago at golden hour, with the Willis Tower and neighboring skyscrapers catching warm light against Lake Michigan.",
     "categories": [
-      "Urban",
-      "Architecture",
-      "Travel"
+      "Urban"
     ],
     "date": "2024-02-20",
     "photographer": "Pedro Lastra",
@@ -32,8 +29,7 @@
     "title": "Tropical Beach at Golden Hour",
     "description": "A quiet shoreline where wet sand meets calm turquoise water. The sun sits low on the horizon beside a dark silhouette of palms.",
     "categories": [
-      "Nature",
-      "Travel"
+      "Nature"
     ],
     "date": "2024-01-10",
     "photographer": "Sean Oulashin",
@@ -45,8 +41,7 @@
     "title": "Colorful Fairy Lights",
     "description": "A dense bundle of miniature holiday bulbs photographed up close. Shallow depth of field turns the surrounding lights into colorful bokeh.",
     "categories": [
-      "Art",
-      "Interior"
+      "Art"
     ],
     "date": "2024-03-05",
     "photographer": "Becca Romine",
@@ -58,8 +53,7 @@
     "title": "Crimson Fluid Abstract",
     "description": "Acrylic-pour marbling in deep reds and pinks, streaked with white and flecks of metallic gold.",
     "categories": [
-      "Art",
-      "Interior"
+      "Art"
     ],
     "date": "2024-02-28",
     "photographer": "Didssph",
@@ -71,8 +65,7 @@
     "title": "Male Lion Walking",
     "description": "A tawny male lion captured mid-stride in a grassy enclosure, its dark mane catching the daylight.",
     "categories": [
-      "Wildlife",
-      "Nature"
+      "Wildlife"
     ],
     "date": "2024-01-25",
     "photographer": "Francesco",
@@ -84,7 +77,6 @@
     "title": "Conference Audience",
     "description": "Rows of people sit in a dim indoor venue, facing off-camera toward a stage. A grid of out-of-focus lights fills the wall above them.",
     "categories": [
-      "Urban",
       "Interior"
     ],
     "date": "2024-04-12",
@@ -97,8 +89,7 @@
     "title": "Alpine Peaks Above Clouds",
     "description": "Jagged alpine summits pierce a valley filled with inversion cloud, photographed from a high ridge under an orange and lavender sky in Randa, Switzerland.",
     "categories": [
-      "Nature",
-      "Travel"
+      "Nature"
     ],
     "date": "2024-03-22",
     "photographer": "Sam Ferrara",
@@ -110,9 +101,7 @@
     "title": "Night Photographer",
     "description": "A photographer shoots during blue hour. City windows and streetlights fall out of focus behind her, leaving warm bokeh against cool urban blues.",
     "categories": [
-      "Urban",
-      "Portrait",
-      "Street"
+      "Urban"
     ],
     "date": "2024-04-08",
     "photographer": "Unsplash Photographer"
