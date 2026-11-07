@@ -65,17 +65,16 @@ files exist.
 
 The contact form uses Netlify Forms. To receive messages by email:
 
-1. Connect this GitHub repository to a Netlify site and deploy it there. Use
-   `yarn build` as the build command and `dist` as the publish directory.
-2. After the first successful deploy, open the site's **Forms** area in Netlify
-   and confirm the `contact` form has been detected.
+1. Deploy the site through the existing Netlify setup. The build command is
+   `yarn build`, and the publish directory is `dist`.
+2. After a successful deploy, open the site's **Forms** area in Netlify and
+   confirm the `contact` form has been detected.
 3. Add an email notification for that form and enter the address that should
    receive enquiries (for example, `info@herzens-werke.com`).
 
 The form submits the visitor's name, email, optional gallery example, and
 message to Netlify. The success page is shown after submission. Netlify Forms
-does not process submissions when the site is only hosted on GitHub Pages or
-viewed through the local development server.
+does not process submissions when viewed through the local development server.
 
 ## Add a portrait to the About page
 
