@@ -10,27 +10,33 @@ const hasPortrait = fs.existsSync(
 );
 ---
 
-<Layout title="About — Herzens Werke">
+<Layout title="About — Herzens Werke" titleDe="Über mich — Herzens Werke">
   <div class="container mx-auto max-w-5xl px-6 py-20 sm:py-28">
     <div class="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
       <div>
         <p class="mb-5 text-sm font-light uppercase tracking-[0.2em] text-accent">
-          A little about me
+          <span data-en="A little about me" data-de="Ein wenig über mich">A little about me</span>
         </p>
         <h1 class="font-display max-w-3xl text-5xl leading-tight font-normal tracking-wide text-ink sm:text-7xl">
-          Making things by hand, and sharing a little joy.
+          <span data-en="Making things by hand, and sharing a little joy." data-de="Mit den Händen gestalten und Freude teilen.">Making things by hand, and sharing a little joy.</span>
         </h1>
         <p class="mt-8 max-w-2xl text-lg leading-8 font-light text-muted">
-          I have always enjoyed making things by hand. Whether it’s a card for a
+          <span
+            data-en="I have always enjoyed making things by hand. Whether it’s a card for a special occasion, a decoration for the home, or a new idea I’m excited to try, creating lets me turn simple materials into something personal. Herzens Werke is where I can share some of what I make and the joy I find in making it."
+            data-de="Ich habe schon immer gerne Dinge mit den eigenen Händen gestaltet. Ob eine Karte für einen besonderen Anlass, eine Dekoration für Zuhause oder eine neue Idee, die ich ausprobieren möchte – beim Gestalten wird aus einfachen Materialien etwas ganz Persönliches. Bei Herzens Werke teile ich meine Arbeiten und die Freude, die ich beim Kreativsein empfinde."
+          >I have always enjoyed making things by hand. Whether it’s a card for a
           special occasion, a decoration for the home, or a new idea I’m excited to
           try, creating lets me turn simple materials into something personal.
           Herzens Werke is where I can share some of what I make and the joy I find
-          in making it.
+          in making it.</span>
         </p>
         <p class="mt-5 max-w-2xl text-lg leading-8 font-light text-muted">
-          Every piece starts with care and a bit of imagination. I hope you find
+          <span
+            data-en="Every piece starts with care and a bit of imagination. I hope you find something here that inspires you. If you have an idea of your own, I’d love to hear about it."
+            data-de="Jedes Stück entsteht mit viel Sorgfalt und einer Prise Fantasie. Ich hoffe, du findest hier etwas, das dich inspiriert. Wenn du selbst eine Idee hast, freue ich mich, davon zu hören."
+          >Every piece starts with care and a bit of imagination. I hope you find
           something here that inspires you. If you have an idea of your own,
-          I’d love to hear about it.
+          I’d love to hear about it.</span>
         </p>
       </div>
 
@@ -40,6 +46,8 @@ const hasPortrait = fs.existsSync(
             <img
               src={portraitSrc}
               alt="Portrait of the maker of Herzens Werke"
+              data-en-alt="Portrait of the maker of Herzens Werke"
+              data-de-alt="Porträt der Künstlerin von Herzens Werke"
               class="aspect-[4/5] w-full rounded-xl border border-rule object-cover shadow-xl"
               fetchpriority="high"
             />
@@ -48,9 +56,10 @@ const hasPortrait = fs.existsSync(
               <span class="font-display text-5xl text-accent" aria-hidden="true">
                 H
               </span>
-              <p class="mt-5 text-lg text-ink">A portrait goes here</p>
+              <p class="mt-5 text-lg text-ink" data-en="A portrait goes here" data-de="Hier kommt ein Porträt hin">A portrait goes here</p>
               <p class="mt-2 text-sm leading-6 font-light text-muted">
-                Add your photo as <code class="text-accent">public/about/portrait.jpg</code>
+                <span data-en="Add your photo as" data-de="Füge dein Foto hier ein:">Add your photo as</span>
+                {' '}<code class="text-accent">public/about/portrait.jpg</code>
               </p>
             </div>
           )
@@ -64,37 +73,41 @@ const hasPortrait = fs.existsSync(
 
     <section class="mt-20 border-t border-rule pt-10 sm:mt-28" aria-labelledby="approach-heading">
       <p class="mb-4 text-sm font-light uppercase tracking-[0.2em] text-accent">
-        Made with care
+        <span data-en="Made with care" data-de="Mit Sorgfalt gemacht">Made with care</span>
       </p>
       <h2
         id="approach-heading"
         class="font-display max-w-2xl text-4xl leading-tight font-normal text-ink sm:text-5xl"
       >
-        A handmade touch makes the little things feel special.
+        <span data-en="A handmade touch makes the little things feel special." data-de="Handgemachtes verleiht den kleinen Dingen etwas Besonderes.">A handmade touch makes the little things feel special.</span>
       </h2>
-      <div class="mt-10 grid gap-8 sm:grid-cols-3">
+      <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <article class="border-t border-rule pt-5">
           <p class="font-display text-3xl text-accent">01</p>
-          <h3 class="mt-4 text-lg text-ink">Cards</h3>
+          <h3 class="mt-4 text-lg text-ink" data-en="Cards" data-de="Karten">Cards</h3>
           <p class="mt-2 text-sm leading-6 font-light text-muted">
-            Thoughtful, handmade cards for celebrations, milestones, and
-            everyday moments.
+            <span data-en="Thoughtful, handmade cards for celebrations, milestones, and everyday moments." data-de="Liebevoll handgemachte Karten für Feste, besondere Meilensteine und alltägliche Momente.">Thoughtful, handmade cards for celebrations, milestones, and everyday moments.</span>
           </p>
         </article>
         <article class="border-t border-rule pt-5">
           <p class="font-display text-3xl text-accent">02</p>
-          <h3 class="mt-4 text-lg text-ink">Decorations</h3>
+          <h3 class="mt-4 text-lg text-ink" data-en="Decorations" data-de="Dekoration">Decorations</h3>
           <p class="mt-2 text-sm leading-6 font-light text-muted">
-            Handmade details to bring a little warmth and personality to a
-            space or occasion.
+            <span data-en="Handmade details to bring a little warmth and personality to a space or occasion." data-de="Handgemachte Details, die Räumen und besonderen Anlässen Wärme und Persönlichkeit verleihen.">Handmade details to bring a little warmth and personality to a space or occasion.</span>
           </p>
         </article>
         <article class="border-t border-rule pt-5">
           <p class="font-display text-3xl text-accent">03</p>
-          <h3 class="mt-4 text-lg text-ink">Your ideas</h3>
+          <h3 class="mt-4 text-lg text-ink" data-en="Jewelry" data-de="Schmuck">Jewelry</h3>
           <p class="mt-2 text-sm leading-6 font-light text-muted">
-            Have something in mind? I’m always happy to hear your ideas and
-            explore what might work.
+            <span data-en="Handmade jewelry and wearable pieces, each with a personal touch." data-de="Handgemachter Schmuck und Accessoires – jedes Stück mit einer persönlichen Note.">Handmade jewelry and wearable pieces, each with a personal touch.</span>
+          </p>
+        </article>
+        <article class="border-t border-rule pt-5">
+          <p class="font-display text-3xl text-accent">04</p>
+          <h3 class="mt-4 text-lg text-ink" data-en="Your ideas" data-de="Deine Ideen">Your ideas</h3>
+          <p class="mt-2 text-sm leading-6 font-light text-muted">
+            <span data-en="Have something in mind? I’m always happy to hear your ideas and explore what might work." data-de="Du hast schon etwas im Sinn? Ich freue mich auf deine Ideen und darauf, gemeinsam herauszufinden, was möglich ist.">Have something in mind? I’m always happy to hear your ideas and explore what might work.</span>
           </p>
         </article>
       </div>
@@ -104,7 +117,7 @@ const hasPortrait = fs.existsSync(
       href={BASE_URL}
       class="mt-14 inline-flex items-center gap-2 text-sm tracking-wide text-accent transition-colors hover:text-ink"
     >
-      See what I make <span aria-hidden="true">→</span>
+      <span data-en="See what I make" data-de="Meine Arbeiten ansehen">See what I make</span> <span aria-hidden="true">→</span>
     </a>
   </div>
 </Layout>

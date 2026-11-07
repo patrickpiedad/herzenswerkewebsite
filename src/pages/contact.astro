@@ -2,34 +2,37 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Contact — Herzens Werke">
+<Layout title="Contact — Herzens Werke" titleDe="Kontakt — Herzens Werke">
   <div class="container mx-auto max-w-6xl px-6 py-20 sm:py-28">
     <p class="mb-5 text-sm font-light uppercase tracking-[0.2em] text-accent">
-      Contact
+      <span data-en="Contact" data-de="Kontakt">Contact</span>
     </p>
     <h1 class="font-display max-w-3xl text-5xl leading-tight font-normal tracking-wide text-ink sm:text-7xl">
-      Let’s talk about art.
+      <span data-en="Let’s talk about art." data-de="Lass uns über Kreatives sprechen.">Let’s talk about art.</span>
     </h1>
     <p class="mt-8 max-w-2xl text-lg leading-8 font-light text-muted">
-      Seen something in the gallery that caught your eye, or have an idea for a
+      <span
+        data-en="Seen something in the gallery that caught your eye, or have an idea for a handmade card, decoration, or other custom piece? Tell me a little about what you’re looking for. We can talk it through and see what might work for you."
+        data-de="Ist dir in der Galerie etwas aufgefallen oder hast du eine Idee für eine handgemachte Karte, Dekoration oder ein anderes individuelles Stück? Erzähl mir, wonach du suchst. Gemeinsam finden wir heraus, was sich umsetzen lässt."
+      >Seen something in the gallery that caught your eye, or have an idea for a
       handmade card, decoration, or other custom piece? Tell me a little about
       what you’re looking for. We can talk it through and see what might work
-      for you.
+      for you.</span>
     </p>
 
     <div class="mt-16 grid gap-14 border-t border-rule pt-10 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
       <section aria-labelledby="get-in-touch-heading">
         <p class="mb-4 text-sm font-light uppercase tracking-[0.2em] text-accent">
-          Information
+          <span data-en="Information" data-de="Informationen">Information</span>
         </p>
         <h2
           id="get-in-touch-heading"
           class="font-display text-4xl font-normal text-ink"
         >
-          Get in touch.
+          <span data-en="Get in touch." data-de="Kontakt aufnehmen.">Get in touch.</span>
         </h2>
         <div class="mt-8 border-t border-rule pt-5">
-          <h3 class="text-sm text-muted">Email</h3>
+          <h3 class="text-sm text-muted" data-en="Email" data-de="E-Mail">Email</h3>
           <a
             href="mailto:info@herzens-werke.com"
             class="mt-2 inline-block text-lg text-ink transition-colors hover:text-accent"
@@ -41,13 +44,13 @@ import Layout from '../layouts/Layout.astro';
 
       <section aria-labelledby="message-heading">
         <p class="mb-4 text-sm font-light uppercase tracking-[0.2em] text-accent">
-          Send a message
+          <span data-en="Send a message" data-de="Nachricht senden">Send a message</span>
         </p>
         <h2
           id="message-heading"
           class="font-display text-4xl font-normal text-ink"
         >
-          Tell me what you have in mind.
+          <span data-en="Tell me what you have in mind." data-de="Erzähl mir von deiner Idee.">Tell me what you have in mind.</span>
         </h2>
         <form
           name="contact"
@@ -66,7 +69,7 @@ import Layout from '../layouts/Layout.astro';
           </p>
           <div class="grid gap-6 sm:grid-cols-2">
             <label class="block text-sm text-muted">
-              Name
+              <span data-en="Name" data-de="Name">Name</span>
               <input
                 class="mt-2 block w-full border border-rule bg-paper-2 px-4 py-3 text-base font-light text-ink placeholder:text-muted focus:border-focus focus:outline-none"
                 type="text"
@@ -76,7 +79,7 @@ import Layout from '../layouts/Layout.astro';
               />
             </label>
             <label class="block text-sm text-muted">
-              Email
+              <span data-en="Email" data-de="E-Mail">Email</span>
               <input
                 class="mt-2 block w-full border border-rule bg-paper-2 px-4 py-3 text-base font-light text-ink placeholder:text-muted focus:border-focus focus:outline-none"
                 type="email"
@@ -87,32 +90,40 @@ import Layout from '../layouts/Layout.astro';
             </label>
           </div>
           <label class="block text-sm text-muted">
-            Which example caught your eye? <span class="font-light">(optional)</span>
+            <span data-en="Which example caught your eye?" data-de="Welches Beispiel gefällt dir?">Which example caught your eye?</span>
+            <span class="font-light" data-en="(optional)" data-de="(optional)">(optional)</span>
             <input
               class="mt-2 block w-full border border-rule bg-paper-2 px-4 py-3 text-base font-light text-ink placeholder:text-muted focus:border-focus focus:outline-none"
               type="text"
               name="example"
               placeholder="For example, the name of a card or decoration"
+              data-en-placeholder="For example, the name of a card or decoration"
+              data-de-placeholder="Zum Beispiel der Name einer Karte oder Dekoration"
             />
           </label>
           <label class="block text-sm text-muted">
-            Your idea or message
+            <span data-en="Your idea or message" data-de="Deine Idee oder Nachricht">Your idea or message</span>
             <textarea
               class="mt-2 block min-h-40 w-full resize-y border border-rule bg-paper-2 px-4 py-3 text-base font-light text-ink placeholder:text-muted focus:border-focus focus:outline-none"
               name="message"
               rows="6"
               placeholder="What are you hoping for? Feel free to share an occasion, colors, style, or any other details."
+              data-en-placeholder="What are you hoping for? Feel free to share an occasion, colors, style, or any other details."
+              data-de-placeholder="Was stellst du dir vor? Nenne gern Anlass, Farben, Stil oder andere Details."
               required></textarea>
           </label>
           <button
             class="inline-flex items-center gap-2 border border-accent bg-accent px-6 py-3 text-sm tracking-wide text-on-accent transition-opacity hover:opacity-85"
             type="submit"
           >
-            Send an inquiry <span aria-hidden="true">→</span>
+            <span data-en="Send an inquiry" data-de="Anfrage senden">Send an inquiry</span> <span aria-hidden="true">→</span>
           </button>
           <p class="text-sm leading-6 font-light text-muted">
-            Your message will be sent securely through our website. We can
-            discuss the details together; there’s no obligation to order.
+            <span
+              data-en="Your message will be sent securely through our website. We can discuss the details together; there’s no obligation to order."
+              data-de="Deine Nachricht wird sicher über unsere Website übermittelt. Wir können alles gemeinsam besprechen – ganz unverbindlich."
+            >Your message will be sent securely through our website. We can
+            discuss the details together; there’s no obligation to order.</span>
           </p>
         </form>
       </section>

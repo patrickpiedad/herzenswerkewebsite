@@ -31,6 +31,13 @@ const gallery = defineCollection({
     description: z.string(),
     mainCategory: z.string(),
     tags: z.array(z.string()).default([]),
+    translations: z.object({
+      de: z.object({
+        title: z.string(),
+        alt: z.string(),
+        description: z.string(),
+      }).optional(),
+    }).optional(),
     date: z.string(),
     mediaType: z.enum(["image", "video"]).optional(),
     poster: z.string().optional(),

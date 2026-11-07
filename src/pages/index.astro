@@ -14,16 +14,18 @@ const categories = mainCategories.map((category) => ({
 }));
 ---
 
-<Layout title="Home — Herzens Werke">
+<Layout title="Home — Herzens Werke" titleDe="Startseite — Herzens Werke">
   <div class="container mx-auto px-6 py-16">
     <h1
       class="font-display text-5xl font-normal tracking-wide text-ink sm:text-6xl"
     >
-      Handmade with heart.
+      <span data-en="Handmade with heart." data-de="Mit Liebe handgemacht.">Handmade with heart.</span>
     </h1>
     <p class="mb-12 mt-4 max-w-2xl text-lg leading-8 font-light text-muted">
-      A collection of handmade cards, decorations, jewelry, and little creative ideas. Browse for inspiration, and get in touch if you have something special in
-      mind.
+      <span
+        data-en="A collection of handmade cards, decorations, jewelry, and little creative ideas. Browse for inspiration, and get in touch if you have something special in mind."
+        data-de="Eine Sammlung handgemachter Karten, Dekorationen, Schmuckstücke und kreativer Ideen. Lass dich inspirieren und melde dich, wenn du etwas Besonderes suchst."
+      >A collection of handmade cards, decorations, jewelry, and little creative ideas. Browse for inspiration, and get in touch if you have something special in mind.</span>
     </p>
 
     <section class="mb-14" aria-labelledby="main-categories-heading">
@@ -31,9 +33,14 @@ const categories = mainCategories.map((category) => ({
         id="main-categories-heading"
         class="mb-5 text-sm font-light uppercase tracking-[0.2em] text-accent"
       >
-        Explore by type
+        <span data-en="Explore by type" data-de="Nach Art entdecken">Explore by type</span>
       </h2>
-      <nav class="grid gap-3 sm:grid-cols-3" aria-label="Main categories">
+      <nav
+        class="grid gap-3 sm:grid-cols-3"
+        aria-label="Main categories"
+        data-en-label="Main categories"
+        data-de-label="Hauptkategorien"
+      >
         {categories.map((category) => (
           <a
             href={path.join(BASE_URL, 'category', category.slug)}
@@ -41,14 +48,16 @@ const categories = mainCategories.map((category) => ({
           >
             <span class="flex items-center justify-between gap-3">
               <span class="font-display text-2xl text-ink transition-colors group-hover:text-accent">
-                {category.name}
+                <span data-en={category.name} data-de={category.nameDe}>{category.name}</span>
               </span>
               <span class="text-sm font-light text-muted">
                 {category.count}
               </span>
             </span>
             <span class="mt-2 block text-sm leading-6 font-light text-muted">
-              {category.description}
+              <span data-en={category.description} data-de={category.descriptionDe}>
+                {category.description}
+              </span>
             </span>
           </a>
         ))}
@@ -56,7 +65,7 @@ const categories = mainCategories.map((category) => ({
     </section>
 
     <h2 class="mb-6 font-display text-3xl font-normal tracking-wide text-ink">
-      All creations
+      <span data-en="All creations" data-de="Alle Werke">All creations</span>
     </h2>
     <GalleryMasonry images={images} randomize />
   </div>

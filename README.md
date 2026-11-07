@@ -3,6 +3,9 @@
 A portfolio of handmade cards, decorations, and other crafts. The gallery is
 for sharing examples and inspiration; it does not take orders or payments.
 
+The site is available in English and German. Use the `DE` / `EN` button in the
+header to switch languages; the selection is remembered as you browse.
+
 ## Run locally
 
 ```sh
@@ -33,6 +36,13 @@ The build checks gallery media and creates the static site in `dist/`.
   "description": "A handmade birthday card decorated with layered blue paper flowers.",
   "mainCategory": "Cards",
   "tags": ["Birthday"],
+  "translations": {
+    "de": {
+      "title": "Bunte Geburtstagskarte",
+      "alt": "Handgemachte Geburtstagskarte mit blauen Blumen",
+      "description": "Eine handgemachte Karte mit liebevoll gestalteten blauen Papierblumen."
+    }
+  },
   "date": "2026-11-07"
 }
 ```
@@ -47,6 +57,9 @@ The available main categories and their display text are defined in
 `src/data/mainCategories.ts`; add a category there when a new kind of work is
 introduced. Tags such as `Birthday`, `Christmas`, or `Living Room` are free-form
 and only appear as filters for the main category where they are used.
+The German labels for common tags are in `src/utils/tags.ts`; add a German label
+there for each new tag. Add German `title`, `alt`, and `description` values in
+`translations.de` for each creation.
 
 ### Add a video
 

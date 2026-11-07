@@ -1,6 +1,7 @@
 ---
 import path from 'path';
 import { slugify } from '../utils/slug';
+import { germanCategory, germanTag } from '../utils/tags';
 
 interface Props {
   categorySlug: string;
@@ -16,13 +17,21 @@ const chipClass =
 const categoryUrl = path.join(BASE_URL, 'category', categorySlug);
 ---
 
-<nav id="category-filters" class="mb-12 flex flex-wrap gap-2" aria-label="Filter by category">
+<nav
+  id="category-filters"
+  class="mb-12 flex flex-wrap gap-2"
+  aria-label="Filter by tag"
+  data-en-label="Filter by tag"
+  data-de-label="Nach Stichwort filtern"
+>
   <a
     href={categoryUrl}
     class:list={[chipClass, { 'is-active': active === 'all' }]}
     aria-current={active === 'all' ? 'page' : undefined}
   >
-    All {categoryName}
+    <span data-en={`All ${categoryName}`} data-de={`Alle ${germanCategory(categoryName)}`}>
+      All {categoryName}
+    </span>
   </a>
   {
     tags.map((tag) => {
@@ -32,6 +41,8 @@ const categoryUrl = path.join(BASE_URL, 'category', categorySlug);
           href={path.join(categoryUrl, slug)}
           class:list={[chipClass, { 'is-active': active === slug }]}
           aria-current={active === slug ? 'page' : undefined}
+          data-en={tag}
+          data-de={germanTag(tag)}
         >
           {tag}
         </a>

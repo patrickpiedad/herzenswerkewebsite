@@ -1,7 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import path from 'path';
-import { formatMainCategoryAndTags } from '../utils/tags';
+import {
+  formatMainCategoryAndTags,
+  germanMainCategoryAndTags,
+} from '../utils/tags';
 
 interface ImageItem {
   id: string;
@@ -12,6 +15,9 @@ interface ImageItem {
   title: string;
   mainCategory: string;
   tags?: string[];
+  translations?: {
+    de?: { title: string; alt: string; description: string };
+  };
 }
 
 interface Props {
@@ -42,6 +48,8 @@ const { BASE_URL } = import.meta.env;
                   <img
                     src={image.poster}
                     alt={image.alt}
+                    data-en-alt={image.alt}
+                    data-de-alt={image.translations?.de?.alt ?? image.alt}
                     class="w-full h-auto object-cover"
                     loading={index < 6 ? 'eager' : 'lazy'}
                     decoding="async"
@@ -59,6 +67,8 @@ const { BASE_URL } = import.meta.env;
                 <img
                   src={image.src}
                   alt={image.alt}
+                  data-en-alt={image.alt}
+                  data-de-alt={image.translations?.de?.alt ?? image.alt}
                   class="w-full h-auto object-cover"
                   loading={index < 6 ? 'eager' : 'lazy'}
                   decoding="async"
@@ -80,10 +90,18 @@ const { BASE_URL } = import.meta.env;
             <div
               class="gallery-caption pointer-events-none absolute inset-x-0 bottom-0 px-3 pb-3 pt-10"
             >
-              <h3 class="text-sm font-medium text-stone-50 md:text-base">
+              <h3
+                class="text-sm font-medium text-stone-50 md:text-base"
+                data-en={image.title}
+                data-de={image.translations?.de?.title ?? image.title}
+              >
                 {image.title}
               </h3>
-              <p class="mt-0.5 text-xs font-light tracking-wide text-stone-200/90 md:text-sm">
+              <p
+                class="mt-0.5 text-xs font-light tracking-wide text-stone-200/90 md:text-sm"
+                data-en={formatMainCategoryAndTags(image)}
+                data-de={germanMainCategoryAndTags(image)}
+              >
                 {formatMainCategoryAndTags(image)}
               </p>
             </div>

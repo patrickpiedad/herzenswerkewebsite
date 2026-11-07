@@ -4,23 +4,26 @@ import Layout from '../../layouts/Layout.astro';
 const { BASE_URL } = import.meta.env;
 ---
 
-<Layout title="Message sent — Herzens Werke">
+<Layout title="Message sent — Herzens Werke" titleDe="Nachricht gesendet — Herzens Werke">
   <div class="container mx-auto max-w-3xl px-6 py-24 text-center sm:py-32">
     <p class="text-sm font-light uppercase tracking-[0.2em] text-accent">
-      Thank you
+      <span data-en="Thank you" data-de="Vielen Dank">Thank you</span>
     </p>
     <h1 class="font-display mt-5 text-5xl font-normal tracking-wide text-ink sm:text-6xl">
-      Your message is on its way.
+      <span data-en="Your message is on its way." data-de="Deine Nachricht ist unterwegs.">Your message is on its way.</span>
     </h1>
     <p class="mx-auto mt-6 max-w-xl text-lg leading-8 font-light text-muted">
-      Thanks for getting in touch. I’ll read your note and get back to you as
-      soon as I can.
+      <span
+        data-en="Thanks for getting in touch. I’ll read your note and get back to you as soon as I can."
+        data-de="Danke für deine Nachricht. Ich lese sie und melde mich so bald wie möglich bei dir."
+      >Thanks for getting in touch. I’ll read your note and get back to you as
+      soon as I can.</span>
     </p>
     <a
       href={BASE_URL}
       class="mt-10 inline-flex items-center gap-2 text-sm tracking-wide text-accent transition-colors hover:text-ink"
     >
-      Back to the gallery <span aria-hidden="true">→</span>
+      <span data-en="Back to the gallery" data-de="Zurück zur Galerie">Back to the gallery</span> <span aria-hidden="true">→</span>
     </a>
   </div>
 </Layout>

@@ -4,7 +4,13 @@ import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import path from 'path';
-import { tagsOf, formatMainCategoryAndTags } from '../../utils/tags';
+import {
+  tagsOf,
+  formatMainCategoryAndTags,
+  germanCategory,
+  germanMainCategoryAndTags,
+  germanTag,
+} from '../../utils/tags';
 
 export async function getStaticPaths() {
   const RELATED_LIMIT = 8;
@@ -40,8 +46,22 @@ export async function getStaticPaths() {
 const { image, related } = Astro.props;
 const { BASE_URL } = import.meta.env;
 const categoryLabel = formatMainCategoryAndTags(image);
+const categoryLabelDe = germanMainCategoryAndTags(image);
+const titleDe = image.translations?.de?.title ?? image.title;
+const descriptionDe = image.translations?.de?.description ?? image.description;
+const altDe = image.translations?.de?.alt ?? image.alt;
 const isVideo = image.mediaType === 'video';
 const isLocalAsset = image.src.startsWith('/');
+const dateEn = new Date(image.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+const dateDe = new Date(image.date).toLocaleDateString('de-DE', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
 
 const largeSrc = isLocalAsset
   ? image.src
@@ -56,7 +76,10 @@ const largeSrc = isLocalAsset
     })();
 ---
 
-<Layout title={`${image.title} — Herzens Werke`}>
+<Layout
+  title={`${image.title} — Herzens Werke`}
+  titleDe={`${titleDe} — Herzens Werke`}
+>
   <div class="container mx-auto px-6 py-16">
     <a
       href={BASE_URL}
@@ -73,7 +96,7 @@ const largeSrc = isLocalAsset
           d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
           clip-rule="evenodd"></path>
       </svg>
-      Back to Home
+      <span data-en="Back to Home" data-de="Zurück zur Startseite">Back to Home</span>
     </a>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
@@ -91,7 +114,7 @@ const largeSrc = isLocalAsset
               poster={image.poster}
             >
               <source src={image.src} />
-              Your browser does not support video playback.
+              <span data-en="Your browser does not support video playback." data-de="Dein Browser unterstützt keine Videowiedergabe.">Your browser does not support video playback.</span>
             </video>
           ) : (
             <button
@@ -99,11 +122,15 @@ const largeSrc = isLocalAsset
               class="zoom-trigger"
               popovertarget="image-zoom"
               aria-label={`View larger: ${image.title}`}
+              data-en-label={`View larger: ${image.title}`}
+              data-de-label={`Größer anzeigen: ${titleDe}`}
             >
               {isLocalAsset ? (
                 <img
                   src={image.src}
                   alt={image.alt}
+                  data-en-alt={image.alt}
+                  data-de-alt={altDe}
                   class="h-auto max-h-[85vh] max-w-full object-contain"
                   loading="eager"
                 />
@@ -111,6 +138,8 @@ const largeSrc = isLocalAsset
                 <Image
                   src={image.src}
                   alt={image.alt}
+                  data-en-alt={image.alt}
+                  data-de-alt={altDe}
                   width="800"
                   height="800"
                   class="w-auto h-auto object-contain max-h-[85vh] max-w-full"
@@ -125,12 +154,16 @@ const largeSrc = isLocalAsset
       <div class="lg:col-span-1 py-4 lg:sticky lg:top-8">
         <h1
           class="text-3xl font-light tracking-wide mb-2 text-ink"
+          data-en={image.title}
+          data-de={titleDe}
         >
           {image.title}
         </h1>
 
         <h2
           class="text-lg font-light mb-8 text-muted tracking-wide"
+          data-en={categoryLabel}
+          data-de={categoryLabelDe}
         >
           {categoryLabel}
         </h2>
@@ -138,6 +171,8 @@ const largeSrc = isLocalAsset
         <div class="mb-8">
           <p
             class="text-ink leading-relaxed font-light"
+            data-en={image.description}
+            data-de={descriptionDe}
           >
             {image.description}
           </p>
@@ -145,36 +180,30 @@ const largeSrc = isLocalAsset
 
         <div class="space-y-4 text-sm">
           <div class="flex">
-            <span class="font-medium w-28 text-muted">Type:</span>
+            <span class="font-medium w-28 text-muted" data-en="Type:" data-de="Art:">Type:</span>
             <span class="text-ink/80 font-light"
-              >{image.mainCategory}</span
+              ><span data-en={image.mainCategory} data-de={germanCategory(image.mainCategory)}>{image.mainCategory}</span></span
             >
           </div>
           {tagsOf(image).length > 0 && (
             <div class="flex">
-              <span class="font-medium w-28 text-muted">Tags:</span>
-              <span class="text-ink/80 font-light">{tagsOf(image).join(' · ')}</span>
+              <span class="font-medium w-28 text-muted" data-en="Tags:" data-de="Stichwörter:">Tags:</span>
+              <span
+                class="text-ink/80 font-light"
+                data-en={tagsOf(image).join(' · ')}
+                data-de={tagsOf(image).map(germanTag).join(' · ')}
+              >{tagsOf(image).join(' · ')}</span>
             </div>
           )}
 
           <div class="flex">
-            <span class="font-medium w-28 text-muted"
-              >Date:</span
-            >
-            <span class="text-ink/80 font-light"
-              >{
-                new Date(image.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })
-              }</span
-            >
+            <span class="font-medium w-28 text-muted" data-en="Date:" data-de="Datum:">Date:</span>
+            <span class="text-ink/80 font-light" data-en={dateEn} data-de={dateDe}>{dateEn}</span>
           </div>
 
           {image.photographer && (
             <div class="flex">
-              <span class="font-medium w-28 text-muted">Photo by:</span>
+              <span class="font-medium w-28 text-muted" data-en="Photo by:" data-de="Foto von:">Photo by:</span>
               {image.photographerLink ? (
                 <a
                   href={image.photographerLink}
@@ -197,7 +226,7 @@ const largeSrc = isLocalAsset
       related.length > 0 && (
         <div class="mt-16">
           <h2 class="text-2xl font-light tracking-wide mb-8 text-ink">
-            Related Images
+            <span data-en="Related Images" data-de="Ähnliche Werke">Related Images</span>
           </h2>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {related.map((image, i) => (
@@ -213,6 +242,8 @@ const largeSrc = isLocalAsset
                         <img
                           src={image.poster}
                           alt={image.alt}
+                          data-en-alt={image.alt}
+                          data-de-alt={image.translations?.de?.alt ?? image.alt}
                           loading={i < 5 ? 'eager' : 'lazy'}
                           class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-102"
                         />
@@ -227,6 +258,8 @@ const largeSrc = isLocalAsset
                       <img
                         src={image.src}
                         alt={image.alt}
+                        data-en-alt={image.alt}
+                        data-de-alt={image.translations?.de?.alt ?? image.alt}
                         loading={i < 5 ? 'eager' : 'lazy'}
                         class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-102"
                       />
@@ -242,9 +275,16 @@ const largeSrc = isLocalAsset
                     )}
                     <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
                       <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-                        <h3 class="text-lg font-medium mb-1">{image.title}</h3>
+                        <h3
+                          class="text-lg font-medium mb-1"
+                          data-en={image.title}
+                          data-de={image.translations?.de?.title ?? image.title}
+                        >{image.title}</h3>
                         <p class="text-sm font-light tracking-wide opacity-90">
-                          {formatMainCategoryAndTags(image)}
+                          <span
+                            data-en={formatMainCategoryAndTags(image)}
+                            data-de={germanMainCategoryAndTags(image)}
+                          >{formatMainCategoryAndTags(image)}</span>
                         </p>
                       </div>
                     </div>
@@ -268,8 +308,15 @@ const largeSrc = isLocalAsset
         popovertarget="image-zoom"
         popovertargetaction="hide"
         aria-label="Close larger image"
+        data-en-label="Close larger image"
+        data-de-label="Großansicht schließen"
       >
-        <img src={largeSrc} alt={image.alt} />
+        <img
+          src={largeSrc}
+          alt={image.alt}
+          data-en-alt={image.alt}
+          data-de-alt={altDe}
+        />
       </button>
     </div>
   )
