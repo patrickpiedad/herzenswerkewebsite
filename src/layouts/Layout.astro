@@ -6,9 +6,10 @@ import path from 'path';
 
 interface Props {
   title: string;
+  titleDe?: string;
 }
 
-const { title } = Astro.props;
+const { title, titleDe = title } = Astro.props;
 const { BASE_URL } = import.meta.env;
 const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 ---
@@ -18,7 +19,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <title data-en={title} data-de={titleDe}>{title}</title>
     <link
       rel="icon"
       type="image/svg+xml"
@@ -55,13 +56,29 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
     transition:animate="initial"
   >
     <div class="fixed top-6 right-6 z-20">
-      <ThemeToggle />
+      <div class="flex items-center gap-2">
+        <button
+          id="language-toggle"
+          type="button"
+          data-en="DE"
+          data-de="EN"
+          aria-label="Switch language to German"
+          data-en-label="Switch language to German"
+          data-de-label="Switch language to English"
+          class="inline-flex h-10 min-w-10 items-center justify-center rounded-full bg-paper-2 px-3 text-xs font-medium tracking-wide text-ink transition-colors duration-200 hover:opacity-90"
+        >
+          DE
+        </button>
+        <ThemeToggle />
+      </div>
     </div>
 
     <header class="border-b border-rule bg-paper">
       <nav
-        class="container mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 py-5 pr-16 sm:pr-20"
+        class="container mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 py-5 pr-24 sm:pr-28"
         aria-label="Main navigation"
+        data-en-label="Main navigation"
+        data-de-label="Hauptnavigation"
       >
         <a
           href={BASE_URL}
@@ -78,7 +95,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
             ]}
             aria-current={currentPath === '/' ? 'page' : undefined}
           >
-            Home
+            <span data-en="Home" data-de="Startseite">Home</span>
           </a>
           <a
             href={path.join(BASE_URL, 'about')}
@@ -88,7 +105,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
             ]}
             aria-current={currentPath === '/about' ? 'page' : undefined}
           >
-            About
+            <span data-en="About" data-de="Über mich">About</span>
           </a>
           <a
             href={path.join(BASE_URL, 'contact')}
@@ -98,7 +115,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
             ]}
             aria-current={currentPath === '/contact' ? 'page' : undefined}
           >
-            Contact
+            <span data-en="Contact" data-de="Kontakt">Contact</span>
           </a>
         </div>
       </nav>
@@ -117,9 +134,42 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
       >
         <p>
           &copy; {new Date().getFullYear()}{' '}
-          Herzens Werke
+          <span data-en="Herzens Werke" data-de="Herzens Werke">Herzens Werke</span>
         </p>
       </div>
     </footer>
+    <script is:inline>
+      (() => {
+        const getLanguage = () =>
+          localStorage.getItem('language') === 'de' ? 'de' : 'en';
+
+        const applyLanguage = (language) => {
+          document.documentElement.lang = language;
+          document.querySelectorAll('[data-en][data-de]').forEach((element) => {
+            element.textContent = element.getAttribute(`data-${language}`);
+          });
+          document.querySelectorAll('[data-en-alt][data-de-alt]').forEach((element) => {
+            element.setAttribute('alt', element.getAttribute(`data-${language}-alt`));
+          });
+          document.querySelectorAll('[data-en-placeholder][data-de-placeholder]').forEach((element) => {
+            element.setAttribute('placeholder', element.getAttribute(`data-${language}-placeholder`));
+          });
+          document.querySelectorAll('[data-en-label][data-de-label]').forEach((element) => {
+            element.setAttribute('aria-label', element.getAttribute(`data-${language}-label`));
+          });
+        };
+
+        document.addEventListener('click', (event) => {
+          if (event.target instanceof Element && event.target.closest('#language-toggle')) {
+            const language = getLanguage() === 'en' ? 'de' : 'en';
+            localStorage.setItem('language', language);
+            applyLanguage(language);
+          }
+        });
+
+        document.addEventListener('astro:page-load', () => applyLanguage(getLanguage()));
+        document.addEventListener('DOMContentLoaded', () => applyLanguage(getLanguage()));
+      })();
+    </script>
   </body>
 </html>

@@ -26,21 +26,27 @@ const { category, images, tags } = Astro.props;
 const { BASE_URL } = import.meta.env;
 ---
 
-<Layout title={`${category.name} — Herzens Werke`}>
+<Layout
+  title={`${category.name} — Herzens Werke`}
+  titleDe={`${category.nameDe} — Herzens Werke`}
+>
   <div class="container mx-auto px-6 py-16">
     <a
       href={BASE_URL}
       class="mb-8 inline-flex items-center gap-2 rounded-full border border-rule px-4 py-2 text-sm font-light text-muted transition-colors hover:border-accent hover:text-accent"
     >
-      <span aria-hidden="true">←</span> Browse all creations
+      <span aria-hidden="true">←</span>
+      <span data-en="Browse all creations" data-de="Alle Werke ansehen">Browse all creations</span>
     </a>
     <h1
       class="font-display text-5xl font-normal tracking-wide text-ink sm:text-6xl"
     >
-      {category.name}
+      <span data-en={category.name} data-de={category.nameDe}>{category.name}</span>
     </h1>
     <p class="mb-10 mt-4 max-w-2xl text-lg leading-8 font-light text-muted">
-      {category.description}
+      <span data-en={category.description} data-de={category.descriptionDe}>
+        {category.description}
+      </span>
     </p>
     <CategoryFilters
       categorySlug={category.slug}
@@ -53,7 +59,11 @@ const { BASE_URL } = import.meta.env;
         <GalleryMasonry images={images} />
       ) : (
         <p class="border-t border-rule py-8 font-light text-muted">
-          There are no examples here yet. Have an idea? <a class="text-accent hover:text-ink" href={`${BASE_URL}contact/`}>Get in touch</a>.
+          <span data-en="There are no examples here yet. Have an idea?" data-de="Hier gibt es noch keine Beispiele. Hast du eine Idee?">There are no examples here yet. Have an idea?</span>
+          {' '}
+          <a class="text-accent hover:text-ink" href={`${BASE_URL}contact/`} data-en="Get in touch" data-de="Melde dich">
+            Get in touch
+          </a>.
         </p>
       )
     }
