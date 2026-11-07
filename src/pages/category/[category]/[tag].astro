@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import CategoryFilters from '../../../components/CategoryFilters.astro';
+import GalleryMasonry from '../../../components/GalleryMasonry.astro';
+import { mainCategories } from '../../../data/mainCategories';
+import { tagsOf } from '../../../utils/tags';
+import { slugify } from '../../../utils/slug';
+
+export async function getStaticPaths() {
+  const collection = await getCollection('gallery');
+  const images = collection.map((entry) => ({ ...entry.data, id: entry.id }));
+
+  return mainCategories.flatMap((category) => {
+    const categoryImages = images.filter(
+      (image) => image.mainCategory === category.name,
+    );
+    const tags = [...new Set(categoryImages.flatMap((image) => tagsOf(image)))];
+
+    return tags.map((tag) => ({
+      params: { category: category.slug, tag: slugify(tag) },
+      props: {
+        category,
+        tag,
+        tags: tags.sort((a, b) => a.localeCompare(b)),
+        images: categoryImages.filter((image) =>
+          tagsOf(image).some((itemTag) => slugify(itemTag) === slugify(tag)),
+        ),
+      },
+    }));
+  });
+}
+
+const { category, tag, tags, images } = Astro.props;
+const { BASE_URL } = import.meta.env;
+---
+
+<Layout title={`${tag} — ${category.name} — Herzens Werke`}>
+  <div class="container mx-auto px-6 py-16">
+    <div class="mb-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+      <a
+        href={BASE_URL}
+        class="inline-flex items-center gap-2 rounded-full border border-rule px-4 py-2 text-sm font-light text-muted transition-colors hover:border-accent hover:text-accent"
+      >
+        <span aria-hidden="true">←</span> Browse all creations
+      </a>
+      <a
+        href={`${BASE_URL}category/${category.slug}/`}
+        class="text-sm font-light text-muted transition-colors hover:text-accent"
+      >
+        All {category.name}
+      </a>
+    </div>
+    <h1 class="font-display text-5xl font-normal tracking-wide text-ink sm:text-6xl">
+      {tag}
+    </h1>
+    <p class="mb-10 mt-4 text-lg font-light text-muted">{category.name}</p>
+    <CategoryFilters
+      categorySlug={category.slug}
+      categoryName={category.name}
+      tags={tags}
+      active={slugify(tag)}
+    />
+    <GalleryMasonry images={images} />
+  </div>
+</Layout>

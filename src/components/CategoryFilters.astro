@@ -3,34 +3,37 @@ import path from 'path';
 import { slugify } from '../utils/slug';
 
 interface Props {
-  categories: string[];
+  categorySlug: string;
+  categoryName: string;
+  tags: string[];
   active: string | 'all';
 }
 
-const { categories, active } = Astro.props;
+const { categorySlug, categoryName, tags, active } = Astro.props;
 const { BASE_URL } = import.meta.env;
 const chipClass =
   'category-chip rounded-full border border-rule px-3 py-1 text-sm font-light tracking-wide text-muted transition-colors duration-300 hover:text-ink';
+const categoryUrl = path.join(BASE_URL, 'category', categorySlug);
 ---
 
 <nav id="category-filters" class="mb-12 flex flex-wrap gap-2" aria-label="Filter by category">
   <a
-    href={BASE_URL}
+    href={categoryUrl}
     class:list={[chipClass, { 'is-active': active === 'all' }]}
     aria-current={active === 'all' ? 'page' : undefined}
   >
-    All
+    All {categoryName}
   </a>
   {
-    categories.map((category) => {
-      const slug = slugify(category);
+    tags.map((tag) => {
+      const slug = slugify(tag);
       return (
         <a
-          href={path.join(BASE_URL, 'category', slug)}
+          href={path.join(categoryUrl, slug)}
           class:list={[chipClass, { 'is-active': active === slug }]}
           aria-current={active === slug ? 'page' : undefined}
         >
-          {category}
+          {tag}
         </a>
       );
     })

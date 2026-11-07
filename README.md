@@ -31,14 +31,22 @@ The build checks gallery media and creates the static site in `dist/`.
   "alt": "Handmade birthday card with blue flowers and a white ribbon",
   "title": "Blue Floral Birthday Card",
   "description": "A handmade birthday card decorated with layered blue paper flowers.",
-  "categories": ["Cards", "Birthday"],
+  "mainCategory": "Cards",
+  "tags": ["Birthday"],
   "date": "2026-11-07"
 }
 ```
 
-Use a unique title, describe the visible details in `alt`, and add one or more
-categories. Keep the original full-resolution photo separately; for the
-website, a resized JPG or WebP is usually quicker to load.
+Use a unique title, describe the visible details in `alt`, choose one main
+category (`Cards`, `Decorations`, or `Jewelry`), and add any useful tags. Tags
+are discovered from the items in that main category, so add tags freely without
+maintaining a separate tag list. The Home page always shows every item in a
+random order; selecting a main category or tag filters the gallery. Keep the
+original full-resolution photo separately; a resized JPG or WebP loads faster.
+The available main categories and their display text are defined in
+`src/data/mainCategories.ts`; add a category there when a new kind of work is
+introduced. Tags such as `Birthday`, `Christmas`, or `Living Room` are free-form
+and only appear as filters for the main category where they are used.
 
 ### Add a video
 
@@ -52,7 +60,8 @@ Place an MP4 and a thumbnail image in `public/gallery/`. Add an entry like:
   "alt": "A paper flower being assembled by hand",
   "title": "Making a Paper Flower",
   "description": "A short look at assembling a layered paper flower.",
-  "categories": ["Decorations", "Behind the Scenes"],
+  "mainCategory": "Decorations",
+  "tags": ["Behind the Scenes"],
   "date": "2026-11-07"
 }
 ```

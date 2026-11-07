@@ -1,10 +1,13 @@
 // src/types.ts
 export interface ImageData {
-  id: number;
+  id: string;
   src: string;
   alt: string;
   title: string;
   description: string;
-  categories: string[];
+  mainCategory: string;
+  tags: string[];
   date: string;
+  mediaType?: 'image' | 'video';
+  poster?: string;
 }

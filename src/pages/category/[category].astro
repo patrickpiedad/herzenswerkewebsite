@@ -3,41 +3,59 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import CategoryFilters from '../../components/CategoryFilters.astro';
 import GalleryMasonry from '../../components/GalleryMasonry.astro';
-import { categoriesOf } from '../../utils/categories';
-import { slugify } from '../../utils/slug';
+import { mainCategories } from '../../data/mainCategories';
+import { tagsOf } from '../../utils/tags';
 
 export async function getStaticPaths() {
   const collection = await getCollection('gallery');
   const images = collection.map((a) => ({ ...a.data, id: a.id }));
-  const allCategories = [
-    ...new Set(images.flatMap((img) => categoriesOf(img))),
-  ].sort((a, b) => a.localeCompare(b));
 
-  return allCategories.map((category) => {
-    const slug = slugify(category);
-    const filtered = images.filter((img) =>
-      categoriesOf(img).some((c) => slugify(c) === slug),
+  return mainCategories.map((category) => {
+    const filtered = images.filter((img) => img.mainCategory === category.name);
+    const tags = [...new Set(filtered.flatMap((image) => tagsOf(image)))].sort(
+      (a, b) => a.localeCompare(b),
     );
     return {
-      params: { category: slug },
-      props: { category, images: filtered, allCategories },
+      params: { category: category.slug },
+      props: { category, images: filtered, tags },
     };
   });
 }
 
-const { category, images, allCategories } = Astro.props;
+const { category, images, tags } = Astro.props;
+const { BASE_URL } = import.meta.env;
 ---
 
-<Layout title={`${category} — Frame Shift`}>
+<Layout title={`${category.name} — Herzens Werke`}>
   <div class="container mx-auto px-6 py-16">
-    <h1
-      class="font-display mb-8 text-5xl font-normal tracking-wide text-ink"
+    <a
+      href={BASE_URL}
+      class="mb-8 inline-flex items-center gap-2 rounded-full border border-rule px-4 py-2 text-sm font-light text-muted transition-colors hover:border-accent hover:text-accent"
     >
-      Gallery
+      <span aria-hidden="true">←</span> Browse all creations
+    </a>
+    <h1
+      class="font-display text-5xl font-normal tracking-wide text-ink sm:text-6xl"
+    >
+      {category.name}
     </h1>
-
-    <CategoryFilters categories={allCategories} active={slugify(category)} />
-    <GalleryMasonry images={images} />
+    <p class="mb-10 mt-4 max-w-2xl text-lg leading-8 font-light text-muted">
+      {category.description}
+    </p>
+    <CategoryFilters
+      categorySlug={category.slug}
+      categoryName={category.name}
+      tags={tags}
+      active="all"
+    />
+    {
+      images.length > 0 ? (
+        <GalleryMasonry images={images} />
+      ) : (
+        <p class="border-t border-rule py-8 font-light text-muted">
+          There are no examples here yet. Have an idea? <a class="text-accent hover:text-ink" href={`${BASE_URL}contact/`}>Get in touch</a>.
+        </p>
+      )
+    }
   </div>
 </Layout>
-

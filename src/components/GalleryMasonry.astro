@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import path from 'path';
-import { formatCategories } from '../utils/categories';
+import { formatMainCategoryAndTags } from '../utils/tags';
 
 interface ImageItem {
   id: string;
@@ -10,22 +10,26 @@ interface ImageItem {
   poster?: string;
   alt: string;
   title: string;
-  categories?: string[];
-  category?: string;
+  mainCategory: string;
+  tags?: string[];
 }
 
 interface Props {
   images: ImageItem[];
+  randomize?: boolean;
 }
 
-const { images } = Astro.props;
+const { images, randomize = false } = Astro.props;
 const { BASE_URL } = import.meta.env;
 ---
 
-<div class="masonry-container columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+<div
+  class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+  data-randomize={randomize ? 'true' : undefined}
+>
   {
     images.map((image, index) => (
-      <div class="masonry-item break-inside-avoid mb-6">
+      <div class="min-w-0">
         <a
           href={path.join(BASE_URL, 'image', image.id)}
           class="group block overflow-hidden rounded-lg relative transition-shadow duration-300 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-500"
@@ -80,7 +84,7 @@ const { BASE_URL } = import.meta.env;
                 {image.title}
               </h3>
               <p class="mt-0.5 text-xs font-light tracking-wide text-stone-200/90 md:text-sm">
-                {formatCategories(image)}
+                {formatMainCategoryAndTags(image)}
               </p>
             </div>
           </div>
@@ -99,3 +103,19 @@ const { BASE_URL } = import.meta.env;
     );
   }
 </style>
+
+<script>
+  function shuffleGalleries() {
+    document.querySelectorAll<HTMLElement>('[data-randomize="true"]').forEach((gallery) => {
+      const items = Array.from(gallery.children);
+      for (let index = items.length - 1; index > 0; index -= 1) {
+        const swapIndex = Math.floor(Math.random() * (index + 1));
+        [items[index], items[swapIndex]] = [items[swapIndex], items[index]];
+      }
+      items.forEach((item) => gallery.append(item));
+    });
+  }
+
+  shuffleGalleries();
+  document.addEventListener('astro:page-load', shuffleGalleries);
+</script>
