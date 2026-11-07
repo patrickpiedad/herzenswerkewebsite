@@ -1,15 +1,17 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import CategoryFilters from '../components/CategoryFilters.astro';
 import GalleryMasonry from '../components/GalleryMasonry.astro';
-import { categoriesOf } from '../utils/categories';
+import path from 'path';
+import { mainCategories } from '../data/mainCategories';
 
 const collection = await getCollection('gallery');
 const images = collection.map((a) => ({ ...a.data, id: a.id }));
-const allCategories = [
-  ...new Set(images.flatMap((img) => categoriesOf(img))),
-].sort((a, b) => a.localeCompare(b));
+const { BASE_URL } = import.meta.env;
+const categories = mainCategories.map((category) => ({
+  ...category,
+  count: images.filter((image) => image.mainCategory === category.name).length,
+}));
 ---
 
 <Layout title="Home — Herzens Werke">
@@ -19,11 +21,43 @@ const allCategories = [
     >
       Handmade with heart.
     </h1>
-    <p class="mb-10 mt-4 max-w-2xl text-lg leading-8 font-light text-muted">
-      A collection of handmade cards, decorations, and little creative ideas. Browse for inspiration, and get in touch if you have something special in
+    <p class="mb-12 mt-4 max-w-2xl text-lg leading-8 font-light text-muted">
+      A collection of handmade cards, decorations, jewelry, and little creative ideas. Browse for inspiration, and get in touch if you have something special in
       mind.
     </p>
-    <CategoryFilters categories={allCategories} active="all" />
-    <GalleryMasonry images={images} />
+
+    <section class="mb-14" aria-labelledby="main-categories-heading">
+      <h2
+        id="main-categories-heading"
+        class="mb-5 text-sm font-light uppercase tracking-[0.2em] text-accent"
+      >
+        Explore by type
+      </h2>
+      <nav class="grid gap-3 sm:grid-cols-3" aria-label="Main categories">
+        {categories.map((category) => (
+          <a
+            href={path.join(BASE_URL, 'category', category.slug)}
+            class="group border border-rule bg-paper-2 p-5 transition-colors hover:border-accent"
+          >
+            <span class="flex items-center justify-between gap-3">
+              <span class="font-display text-2xl text-ink transition-colors group-hover:text-accent">
+                {category.name}
+              </span>
+              <span class="text-sm font-light text-muted">
+                {category.count}
+              </span>
+            </span>
+            <span class="mt-2 block text-sm leading-6 font-light text-muted">
+              {category.description}
+            </span>
+          </a>
+        ))}
+      </nav>
+    </section>
+
+    <h2 class="mb-6 font-display text-3xl font-normal tracking-wide text-ink">
+      All creations
+    </h2>
+    <GalleryMasonry images={images} randomize />
   </div>
 </Layout>

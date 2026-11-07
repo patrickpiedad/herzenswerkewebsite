@@ -5,7 +5,8 @@
     "alt": "Handmade card featuring a pink pig riding a colorful rocket",
     "title": "Pig Rocket",
     "description": "Handmade watercolor card featuring a playful pink pig flying through the sky on a colorful rocket.",
-    "categories": ["Cards", "Birthday"],
+    "mainCategory": "Cards",
+    "tags": ["Birthday"],
     "date": "2026-11-07"
   },
   {
@@ -13,7 +14,8 @@
     "alt": "Handmade watercolor card featuring three colorful houses",
     "title": "Colorful Houses",
     "description": "Handmade watercolor card featuring three charming colorful houses and green trees.",
-    "categories": ["Cards", "Everyday"],
+    "mainCategory": "Cards",
+    "tags": ["Everyday"],
     "date": "2026-11-07"
   },
   {
@@ -21,7 +23,8 @@
     "alt": "Handmade Christmas card featuring a festive mailbox, bicycle, and presents",
     "title": "Christmas Mailbox",
     "description": "Handmade Christmas card with a decorated mailbox, bicycle carrying a Christmas tree, and wrapped presents.",
-    "categories": ["Cards", "Christmas"],
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
     "date": "2026-11-07"
   },
   {
@@ -29,7 +32,8 @@
     "alt": "Handmade Christmas card featuring a blue bear pulling a wagon of presents",
     "title": "Christmas Bear Wagon",
     "description": "Handmade watercolor Christmas card featuring a cheerful blue bear pulling a little red wagon filled with gifts.",
-    "categories": ["Cards", "Christmas"],
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
     "date": "2026-11-07"
   },
   {
@@ -37,7 +41,8 @@
     "alt": "Handmade graduation card with a duck wearing a graduation cap",
     "title": "Proud Graduate Duck",
     "description": "Handmade graduation card featuring a duck in a graduation cap with the message 'So ducking proud of you!'",
-    "categories": ["Cards", "Graduation"],
+    "mainCategory": "Cards",
+    "tags": ["Graduation"],
     "date": "2026-11-07"
   },
   {
@@ -45,7 +50,8 @@
     "alt": "Handmade winter card featuring a little house inside a snow globe",
     "title": "Winter Snow Globe",
     "description": "Handmade watercolor winter card featuring a cozy little house surrounded by trees inside a snow globe.",
-    "categories": ["Cards", "Christmas"],
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
     "date": "2026-11-07"
   },
   {
@@ -53,7 +59,8 @@
     "alt": "Handmade Christmas card featuring a smiling gingerbread man",
     "title": "Gingerbread Man",
     "description": "Handmade watercolor Christmas card featuring a smiling gingerbread man with decorative icing.",
-    "categories": ["Cards", "Christmas"],
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
     "date": "2026-11-07"
   },
   {
@@ -61,7 +68,8 @@
     "alt": "Handmade Christmas card featuring a miniature Christmas tree inside a hanging glass jar",
     "title": "Christmas Tree Jar",
     "description": "Handmade watercolor Christmas card featuring a little Christmas tree inside a hanging glass jar with the greeting 'Frohe Weihnachten'.",
-    "categories": ["Cards", "Christmas"],
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
     "date": "2026-11-07"
   },
   {
@@ -69,7 +77,8 @@
     "alt": "Handmade birthday card featuring a llama carrying a cake and colorful presents",
     "title": "Birthday Party Llama",
     "description": "Handmade birthday card featuring a festive llama wearing a party hat and carrying a birthday cake and presents.",
-    "categories": ["Cards", "Birthday"],
+    "mainCategory": "Cards",
+    "tags": ["Birthday"],
     "date": "2026-11-07"
   },
   {
@@ -77,7 +86,8 @@
     "alt": "Handmade New Year card featuring a sled with a lucky clover and a bottle",
     "title": "New Year Sled",
     "description": "Handmade New Year card featuring a sled carrying a bottle decorated with a lucky four-leaf clover and a red ribbon.",
-    "categories": ["Cards", "Happy New Year"],
+    "mainCategory": "Cards",
+    "tags": ["Happy New Year"],
     "date": "2026-11-07"
   },
   {
@@ -85,7 +95,8 @@
     "alt": "Handmade birthday card with a mouse blowing out a cupcake candle",
     "title": "Birthday Cupcake Mouse",
     "description": "Handmade birthday card with a mouse blowing out a cupcake candle.",
-    "categories": ["Cards", "Birthday"],
+    "mainCategory": "Cards",
+    "tags": ["Birthday"],
     "date": "2026-11-07"
   },
   {
@@ -93,7 +104,8 @@
     "alt": "Handmade Christmas card featuring a cute cat wearing a winter hat and scarf",
     "title": "Christmas Cat",
     "description": "Handmade watercolor Christmas card featuring a smiling cat in a colorful winter hat and scarf with the greeting 'Frohe Weihnachten'.",
-    "categories": ["Cards", "Christmas"],
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
     "date": "2026-11-07"
   },
   {
@@ -101,7 +113,8 @@
     "alt": "Handmade New Year card with five pigs wishing Sau viel Glück im neuen Jahr",
     "title": "Sau viel Glück im neuen Jahr!",
     "description": "Handmade New Year card featuring five cheerful pigs wishing 'Sau viel Glück im neuen Jahr!'",
-    "categories": ["Cards", "Happy New Year"],
+    "mainCategory": "Cards",
+    "tags": ["Happy New Year"],
     "date": "2026-11-07"
   }
 ]

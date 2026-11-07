@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import path from 'path';
-import { categoriesOf, formatCategories } from '../../utils/categories';
+import { tagsOf, formatMainCategoryAndTags } from '../../utils/tags';
 
 export async function getStaticPaths() {
   const RELATED_LIMIT = 8;
@@ -12,12 +12,14 @@ export async function getStaticPaths() {
   const images = collection.map((a) => ({ ...a.data, id: a.id }));
 
   return images.map((image) => {
-    const imageCats = categoriesOf(image);
+    const imageTags = tagsOf(image);
     const related = images
       .filter((img) => img.id !== image.id)
       .map((img) => {
-        const otherCats = new Set(categoriesOf(img));
-        const score = imageCats.filter((cat) => otherCats.has(cat)).length;
+        const otherTags = new Set(tagsOf(img));
+        const score =
+          Number(img.mainCategory === image.mainCategory) +
+          imageTags.filter((tag) => otherTags.has(tag)).length;
         return { img, score };
       })
       .filter(({ score }) => score > 0)
@@ -37,7 +39,7 @@ export async function getStaticPaths() {
 
 const { image, related } = Astro.props;
 const { BASE_URL } = import.meta.env;
-const categoryLabel = formatCategories(image);
+const categoryLabel = formatMainCategoryAndTags(image);
 const isVideo = image.mediaType === 'video';
 const isLocalAsset = image.src.startsWith('/');
 
@@ -54,7 +56,7 @@ const largeSrc = isLocalAsset
     })();
 ---
 
-<Layout title={`${image.title} — Frame Shift`}>
+<Layout title={`${image.title} — Herzens Werke`}>
   <div class="container mx-auto px-6 py-16">
     <a
       href={BASE_URL}
@@ -143,13 +145,17 @@ const largeSrc = isLocalAsset
 
         <div class="space-y-4 text-sm">
           <div class="flex">
-            <span class="font-medium w-28 text-muted"
-              >Categories:</span
-            >
+            <span class="font-medium w-28 text-muted">Type:</span>
             <span class="text-ink/80 font-light"
-              >{categoryLabel}</span
+              >{image.mainCategory}</span
             >
           </div>
+          {tagsOf(image).length > 0 && (
+            <div class="flex">
+              <span class="font-medium w-28 text-muted">Tags:</span>
+              <span class="text-ink/80 font-light">{tagsOf(image).join(' · ')}</span>
+            </div>
+          )}
 
           <div class="flex">
             <span class="font-medium w-28 text-muted"
@@ -238,7 +244,7 @@ const largeSrc = isLocalAsset
                       <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
                         <h3 class="text-lg font-medium mb-1">{image.title}</h3>
                         <p class="text-sm font-light tracking-wide opacity-90">
-                          {formatCategories(image)}
+                          {formatMainCategoryAndTags(image)}
                         </p>
                       </div>
                     </div>
