@@ -48,16 +48,6 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
         }
       })();
     </script>
-    <style>
-      /* Custom styles for masonry layout */
-      .masonry-container {
-        column-gap: 1.5rem;
-      }
-      .masonry-item {
-        display: inline-block;
-        width: 100%;
-      }
-    </style>
     <ClientRouter />
   </head>
   <body
