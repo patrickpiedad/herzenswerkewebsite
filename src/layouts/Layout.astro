@@ -10,6 +10,7 @@ interface Props {
 
 const { title } = Astro.props;
 const { BASE_URL } = import.meta.env;
+const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 ---
 
 <!doctype html>
@@ -66,6 +67,52 @@ const { BASE_URL } = import.meta.env;
     <div class="fixed top-6 right-6 z-20">
       <ThemeToggle />
     </div>
+
+    <header class="border-b border-rule bg-paper">
+      <nav
+        class="container mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-3 px-6 py-5 pr-16 sm:pr-20"
+        aria-label="Main navigation"
+      >
+        <a
+          href={BASE_URL}
+          class="font-display text-2xl tracking-wide text-ink transition-colors hover:text-accent"
+        >
+          Herzens Werke
+        </a>
+        <div class="flex items-center gap-6 text-sm font-light tracking-wide">
+          <a
+            href={BASE_URL}
+            class:list={[
+              'transition-colors hover:text-accent',
+              { 'text-accent': currentPath === '/', 'text-muted': currentPath !== '/' },
+            ]}
+            aria-current={currentPath === '/' ? 'page' : undefined}
+          >
+            Home
+          </a>
+          <a
+            href={path.join(BASE_URL, 'about')}
+            class:list={[
+              'transition-colors hover:text-accent',
+              { 'text-accent': currentPath === '/about', 'text-muted': currentPath !== '/about' },
+            ]}
+            aria-current={currentPath === '/about' ? 'page' : undefined}
+          >
+            About
+          </a>
+          <a
+            href={path.join(BASE_URL, 'contact')}
+            class:list={[
+              'transition-colors hover:text-accent',
+              { 'text-accent': currentPath === '/contact', 'text-muted': currentPath !== '/contact' },
+            ]}
+            aria-current={currentPath === '/contact' ? 'page' : undefined}
+          >
+            Contact
+          </a>
+        </div>
+      </nav>
+    </header>
 
     <main class="flex-1">
       <slot />

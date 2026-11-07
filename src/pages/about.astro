@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const { BASE_URL } = import.meta.env;
+---
+
+<Layout title="About — Herzens Werke">
+  <div class="container mx-auto max-w-5xl px-6 py-20 sm:py-28">
+    <p class="mb-5 text-sm font-light uppercase tracking-[0.2em] text-accent">
+      A little about me
+    </p>
+    <h1 class="font-display max-w-3xl text-5xl leading-tight font-normal tracking-wide text-ink sm:text-7xl">
+      Making things by hand, and sharing a little joy.
+    </h1>
+    <p class="mt-8 max-w-2xl text-lg leading-8 font-light text-muted">
+      I have always enjoyed making things by hand. Whether it’s a card for a
+      special occasion, a decoration for the home, or a new idea I’m excited to
+      try, creating lets me turn simple materials into something personal.
+      Herzens Werke is where I can share some of what I make and the joy I find
+      in making it.
+    </p>
+    <p class="mt-5 max-w-2xl text-lg leading-8 font-light text-muted">
+      Every piece starts with care and a bit of imagination. I hope you find
+      something here that inspires you. If you have an idea of your own,
+      I’d love to hear about it.
+    </p>
+
+    <section class="mt-20 border-t border-rule pt-10 sm:mt-28" aria-labelledby="approach-heading">
+      <p class="mb-4 text-sm font-light uppercase tracking-[0.2em] text-accent">
+        Made with care
+      </p>
+      <h2
+        id="approach-heading"
+        class="font-display max-w-2xl text-4xl leading-tight font-normal text-ink sm:text-5xl"
+      >
+        A handmade touch makes the little things feel special.
+      </h2>
+      <div class="mt-10 grid gap-8 sm:grid-cols-3">
+        <article class="border-t border-rule pt-5">
+          <p class="font-display text-3xl text-accent">01</p>
+          <h3 class="mt-4 text-lg text-ink">Cards</h3>
+          <p class="mt-2 text-sm leading-6 font-light text-muted">
+            Thoughtful, handmade cards for celebrations, milestones, and
+            everyday moments.
+          </p>
+        </article>
+        <article class="border-t border-rule pt-5">
+          <p class="font-display text-3xl text-accent">02</p>
+          <h3 class="mt-4 text-lg text-ink">Decorations</h3>
+          <p class="mt-2 text-sm leading-6 font-light text-muted">
+            Handmade details to bring a little warmth and personality to a
+            space or occasion.
+          </p>
+        </article>
+        <article class="border-t border-rule pt-5">
+          <p class="font-display text-3xl text-accent">03</p>
+          <h3 class="mt-4 text-lg text-ink">Your ideas</h3>
+          <p class="mt-2 text-sm leading-6 font-light text-muted">
+            Have something in mind? I’m always happy to hear your ideas and
+            explore what might work.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <a
+      href={BASE_URL}
+      class="mt-14 inline-flex items-center gap-2 text-sm tracking-wide text-accent transition-colors hover:text-ink"
+    >
+      See what I make <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</Layout>

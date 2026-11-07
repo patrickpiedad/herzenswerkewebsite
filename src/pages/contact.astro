@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact — Herzens Werke">
+  <div class="container mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <p class="mb-5 text-sm font-light uppercase tracking-[0.2em] text-accent">
+      Contact
+    </p>
+    <h1 class="font-display max-w-3xl text-5xl leading-tight font-normal tracking-wide text-ink sm:text-7xl">
+      Let’s talk about art.
+    </h1>
+    <p class="mt-8 max-w-2xl text-lg leading-8 font-light text-muted">
+      Seen something in the gallery that caught your eye, or have an idea for a
+      handmade card, decoration, or other custom piece? Tell me a little about
+      what you’re looking for. We can talk it through and see what might work
+      for you.
+    </p>
+
+    <div class="mt-16 grid gap-14 border-t border-rule pt-10 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
+      <section aria-labelledby="get-in-touch-heading">
+        <p class="mb-4 text-sm font-light uppercase tracking-[0.2em] text-accent">
+          Information
+        </p>
+        <h2
+          id="get-in-touch-heading"
+          class="font-display text-4xl font-normal text-ink"
+        >
+          Get in touch.
+        </h2>
+        <div class="mt-8 border-t border-rule pt-5">
+          <h3 class="text-sm text-muted">Email</h3>
+          <a
+            href="mailto:info@herzens-werke.com"
+            class="mt-2 inline-block text-lg text-ink transition-colors hover:text-accent"
+          >
+            info@herzens-werke.com
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="message-heading">
+        <p class="mb-4 text-sm font-light uppercase tracking-[0.2em] text-accent">
+          Send a message
+        </p>
+        <h2
+          id="message-heading"
+          class="font-display text-4xl font-normal text-ink"
+        >
+          Tell me what you have in mind.
+        </h2>
+        <form id="contact-form" class="mt-8 space-y-6">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <label class="block text-sm text-muted">
+              Name
+              <input
+                class="mt-2 block w-full border border-rule bg-paper-2 px-4 py-3 text-base font-light text-ink placeholder:text-muted focus:border-focus focus:outline-none"
+                type="text"
+                name="name"
+                autocomplete="name"
+                required
+              />
+            </label>
+            <label class="block text-sm text-muted">
+              Email
+              <input
+                class="mt-2 block w-full border border-rule bg-paper-2 px-4 py-3 text-base font-light text-ink placeholder:text-muted focus:border-focus focus:outline-none"
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+              />
+            </label>
+          </div>
+          <label class="block text-sm text-muted">
+            Which example caught your eye? <span class="font-light">(optional)</span>
+            <input
+              class="mt-2 block w-full border border-rule bg-paper-2 px-4 py-3 text-base font-light text-ink placeholder:text-muted focus:border-focus focus:outline-none"
+              type="text"
+              name="example"
+              placeholder="For example, the name of a card or decoration"
+            />
+          </label>
+          <label class="block text-sm text-muted">
+            Your idea or message
+            <textarea
+              class="mt-2 block min-h-40 w-full resize-y border border-rule bg-paper-2 px-4 py-3 text-base font-light text-ink placeholder:text-muted focus:border-focus focus:outline-none"
+              name="message"
+              rows="6"
+              placeholder="What are you hoping for? Feel free to share an occasion, colors, style, or any other details."
+              required></textarea>
+          </label>
+          <button
+            class="inline-flex items-center gap-2 border border-accent bg-accent px-6 py-3 text-sm tracking-wide text-on-accent transition-opacity hover:opacity-85"
+            type="submit"
+          >
+            Send an inquiry <span aria-hidden="true">→</span>
+          </button>
+          <p class="text-sm leading-6 font-light text-muted">
+            This will open your email app with your inquiry ready to review and
+            send. We can discuss the details together. There’s no obligation to
+            order.
+          </p>
+        </form>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('submit', (event) => {
+    const form = event.target;
+    if (!(form instanceof HTMLFormElement) || form.id !== 'contact-form') return;
+
+    event.preventDefault();
+    const data = new FormData(form);
+    const name = String(data.get('name') ?? '');
+    const email = String(data.get('email') ?? '');
+    const example = String(data.get('example') ?? '');
+    const message = String(data.get('message') ?? '');
+    const subject = encodeURIComponent(`Handmade inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `${message}\n\n${example ? `Gallery example: ${example}\n` : ''}From: ${name}\nEmail: ${email}`,
+    );
+
+    window.location.href = `mailto:info@herzens-werke.com?subject=${subject}&body=${body}`;
+  });
+</script>
