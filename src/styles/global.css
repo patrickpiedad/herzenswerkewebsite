@@ -4,8 +4,18 @@
 @custom-variant light (&:where(.light, .light *));
 
 @theme {
-  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-display: "Shadows Into Light", cursive;
   --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-caveat: "Caveat", cursive;
+  --font-dancing-script: "Dancing Script", cursive;
+  --font-kalam: "Kalam", cursive;
+  --font-satisfy: "Satisfy", cursive;
+  --font-patrick-hand: "Patrick Hand", cursive;
+  --font-shadows: "Shadows Into Light", cursive;
+  --font-marck-script: "Marck Script", cursive;
+  --font-courgette: "Courgette", cursive;
+  --font-bad-script: "Bad Script", cursive;
+  --font-handlee: "Handlee", cursive;
   --text-display: clamp(2.5rem, 4vw + 1rem, 3.75rem);
 
   /* Dark-first cooler midnight + electric cyan accent */
@@ -19,6 +29,11 @@
   --color-focus: oklch(80% 0.15 210);
   --color-on-accent: oklch(14% 0.04 255);
   --color-overlay: oklch(8% 0.03 255 / 0.55);
+}
+
+.font-shadows,
+.font-display {
+  word-spacing: -0.20em;
 }
 
 .dark,

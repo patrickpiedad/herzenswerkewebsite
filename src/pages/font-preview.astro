@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const fontOptions = [
+  { name: 'Caveat', className: 'font-caveat', note: 'Relaxed and expressive', noteDe: 'Locker und ausdrucksstark' },
+  { name: 'Dancing Script', className: 'font-dancing-script', note: 'Elegant and connected', noteDe: 'Elegant und schwungvoll' },
+  { name: 'Kalam', className: 'font-kalam', note: 'Warm and natural', noteDe: 'Warm und natürlich' },
+  { name: 'Satisfy', className: 'font-satisfy', note: 'Smooth and distinctive', noteDe: 'Fließend und markant' },
+  { name: 'Patrick Hand', className: 'font-patrick-hand', note: 'Clear and handwritten', noteDe: 'Klar und handschriftlich' },
+  { name: 'Shadows Into Light', className: 'font-shadows', note: 'Light and informal', noteDe: 'Leicht und ungezwungen' },
+  { name: 'Marck Script', className: 'font-marck-script', note: 'Soft and flowing', noteDe: 'Weich und fließend' },
+  { name: 'Courgette', className: 'font-courgette', note: 'Friendly with gentle curves', noteDe: 'Freundlich mit sanften Schwüngen' },
+  { name: 'Bad Script', className: 'font-bad-script', note: 'Personal and readable', noteDe: 'Persönlich und gut lesbar' },
+  { name: 'Handlee', className: 'font-handlee', note: 'Simple and approachable', noteDe: 'Einfach und zugänglich' },
+];
+---
+
+<Layout
+  title="Font Preview — Herzens Werke"
+  titleDe="Schriftvorschau — Herzens Werke"
+  loadFontPreview
+>
+  <div class="container mx-auto max-w-5xl px-6 py-16 sm:py-20">
+    <p class="mb-4 text-sm font-light uppercase tracking-[0.2em] text-accent">
+      <span data-en="Typography preview" data-de="Schriftvorschau">Typography preview</span>
+    </p>
+    <h1 class="font-display text-4xl font-normal tracking-wide text-ink sm:text-5xl">
+      <span data-en="A more flowing headline" data-de="Eine schwungvollere Überschrift">A more flowing headline</span>
+    </h1>
+    <p class="mt-4 max-w-2xl text-base leading-7 font-light text-muted">
+      <span
+        data-en="Compare these ten readable handwritten styles. Only the large headings would change; the rest of the site's typography would stay as it is."
+        data-de="Vergleiche diese zehn gut lesbaren Handschriften. Nur die großen Überschriften würden geändert; der Rest der Website bliebe unverändert."
+      >Compare these ten readable handwritten styles. Only the large headings would change; the rest of the site's typography would stay as it is.</span>
+    </p>
+
+    <div class="mt-10 grid gap-4">
+      {fontOptions.map((font, index) => (
+        <article class="rounded-xl border border-rule bg-paper-2 p-6 sm:p-8">
+          <div class="mb-5 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 class="text-lg font-medium text-ink">{index + 1}. {font.name}</h2>
+            <p class="text-sm font-light text-muted">
+              <span data-en={font.note} data-de={font.noteDe}>{font.note}</span>
+            </p>
+          </div>
+          <p class:list={[font.className, 'text-5xl leading-tight text-ink sm:text-7xl']}>
+            <span data-en="Handmade with heart." data-de="Mit Liebe handgemacht.">Handmade with heart.</span>
+          </p>
+          <p class="mt-4 max-w-2xl text-base leading-7 font-light text-muted">
+            <span data-en="A collection of handmade cards, decorations, jewelry, and little creative ideas." data-de="Eine Sammlung handgemachter Karten, Dekorationen, Schmuckstücke und kreativer Ideen.">A collection of handmade cards, decorations, jewelry, and little creative ideas.</span>
+          </p>
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-8 text-sm leading-6 font-light text-muted">
+      <span
+        data-en="The samples use online Google Fonts, so connect to the internet when viewing this page."
+        data-de="Die Beispiele verwenden Google Fonts und benötigen beim Aufrufen dieser Seite eine Internetverbindung."
+      >The samples use online Google Fonts, so connect to the internet when viewing this page.</span>
+    </p>
+  </div>
+</Layout>

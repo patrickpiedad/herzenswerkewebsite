@@ -7,9 +7,10 @@ import path from 'path';
 interface Props {
   title: string;
   titleDe?: string;
+  loadFontPreview?: boolean;
 }
 
-const { title, titleDe = title } = Astro.props;
+const { title, titleDe = title, loadFontPreview = false } = Astro.props;
 const { BASE_URL } = import.meta.env;
 const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 ---
@@ -28,9 +29,17 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Geist:wght@300;400;500&family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
+    {
+      loadFontPreview && (
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat:wght@400;500&family=Courgette&family=Dancing+Script:wght@400;500&family=Handlee&family=Kalam:wght@300;400&family=Marck+Script&family=Patrick+Hand&family=Satisfy&display=swap"
+          rel="stylesheet"
+        />
+      )
+    }
     <script is:inline>
       // Dark-first theme init — respect stored preference, else default dark
       (function () {
@@ -82,7 +91,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
       >
         <a
           href={BASE_URL}
-          class="font-display text-2xl tracking-wide text-ink transition-colors hover:text-accent"
+          class="font-shadows text-3xl text-ink transition-colors hover:text-accent"
         >
           Herzens Werke
         </a>
