@@ -63,8 +63,25 @@ files exist.
 
 ## Contact
 
-The contact form opens the visitor's email app with an enquiry addressed to
-`info@herzens-werke.com`. It does not submit orders automatically.
+The contact form uses Netlify Forms. To receive messages by email:
+
+1. Connect this GitHub repository to a Netlify site and deploy it there. Use
+   `yarn build` as the build command and `dist` as the publish directory.
+2. After the first successful deploy, open the site's **Forms** area in Netlify
+   and confirm the `contact` form has been detected.
+3. Add an email notification for that form and enter the address that should
+   receive enquiries (for example, `info@herzens-werke.com`).
+
+The form submits the visitor's name, email, optional gallery example, and
+message to Netlify. The success page is shown after submission. Netlify Forms
+does not process submissions when the site is only hosted on GitHub Pages or
+viewed through the local development server.
+
+## Add a portrait to the About page
+
+Put a web-sized portrait photo at `public/about/portrait.jpg`. The About page
+will show it automatically; until then, it displays a placeholder. A JPG or
+WebP photo around 1600 pixels tall is a good size.
 
 ## License
 

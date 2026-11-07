@@ -1,29 +1,66 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const { BASE_URL } = import.meta.env;
+const portraitSrc = '/about/portrait.jpg';
+const hasPortrait = fs.existsSync(
+  path.join(process.cwd(), 'public', portraitSrc.slice(1)),
+);
 ---
 
 <Layout title="About — Herzens Werke">
   <div class="container mx-auto max-w-5xl px-6 py-20 sm:py-28">
-    <p class="mb-5 text-sm font-light uppercase tracking-[0.2em] text-accent">
-      A little about me
-    </p>
-    <h1 class="font-display max-w-3xl text-5xl leading-tight font-normal tracking-wide text-ink sm:text-7xl">
-      Making things by hand, and sharing a little joy.
-    </h1>
-    <p class="mt-8 max-w-2xl text-lg leading-8 font-light text-muted">
-      I have always enjoyed making things by hand. Whether it’s a card for a
-      special occasion, a decoration for the home, or a new idea I’m excited to
-      try, creating lets me turn simple materials into something personal.
-      Herzens Werke is where I can share some of what I make and the joy I find
-      in making it.
-    </p>
-    <p class="mt-5 max-w-2xl text-lg leading-8 font-light text-muted">
-      Every piece starts with care and a bit of imagination. I hope you find
-      something here that inspires you. If you have an idea of your own,
-      I’d love to hear about it.
-    </p>
+    <div class="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+      <div>
+        <p class="mb-5 text-sm font-light uppercase tracking-[0.2em] text-accent">
+          A little about me
+        </p>
+        <h1 class="font-display max-w-3xl text-5xl leading-tight font-normal tracking-wide text-ink sm:text-7xl">
+          Making things by hand, and sharing a little joy.
+        </h1>
+        <p class="mt-8 max-w-2xl text-lg leading-8 font-light text-muted">
+          I have always enjoyed making things by hand. Whether it’s a card for a
+          special occasion, a decoration for the home, or a new idea I’m excited to
+          try, creating lets me turn simple materials into something personal.
+          Herzens Werke is where I can share some of what I make and the joy I find
+          in making it.
+        </p>
+        <p class="mt-5 max-w-2xl text-lg leading-8 font-light text-muted">
+          Every piece starts with care and a bit of imagination. I hope you find
+          something here that inspires you. If you have an idea of your own,
+          I’d love to hear about it.
+        </p>
+      </div>
+
+      <figure class="mx-auto w-full max-w-sm">
+        {
+          hasPortrait ? (
+            <img
+              src={portraitSrc}
+              alt="Portrait of the maker of Herzens Werke"
+              class="aspect-[4/5] w-full rounded-xl border border-rule object-cover shadow-xl"
+              fetchpriority="high"
+            />
+          ) : (
+            <div class="flex aspect-[4/5] w-full flex-col items-center justify-center rounded-xl border border-rule bg-paper-2 px-8 text-center shadow-xl">
+              <span class="font-display text-5xl text-accent" aria-hidden="true">
+                H
+              </span>
+              <p class="mt-5 text-lg text-ink">A portrait goes here</p>
+              <p class="mt-2 text-sm leading-6 font-light text-muted">
+                Add your photo as <code class="text-accent">public/about/portrait.jpg</code>
+              </p>
+            </div>
+          )
+        }
+        {hasPortrait && (
+          <figcaption class="mt-3 text-center text-sm font-light text-muted">
+          </figcaption>
+        )}
+      </figure>
+    </div>
 
     <section class="mt-20 border-t border-rule pt-10 sm:mt-28" aria-labelledby="approach-heading">
       <p class="mb-4 text-sm font-light uppercase tracking-[0.2em] text-accent">

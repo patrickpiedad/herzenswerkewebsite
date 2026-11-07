@@ -49,7 +49,21 @@ import Layout from '../layouts/Layout.astro';
         >
           Tell me what you have in mind.
         </h2>
-        <form id="contact-form" class="mt-8 space-y-6">
+        <form
+          name="contact"
+          method="POST"
+          action="/contact/success/"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="mt-8 space-y-6"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden" aria-hidden="true">
+            <label>
+              Don’t fill this out if you’re human:
+              <input name="bot-field" tabindex="-1" autocomplete="off" />
+            </label>
+          </p>
           <div class="grid gap-6 sm:grid-cols-2">
             <label class="block text-sm text-muted">
               Name
@@ -97,32 +111,11 @@ import Layout from '../layouts/Layout.astro';
             Send an inquiry <span aria-hidden="true">→</span>
           </button>
           <p class="text-sm leading-6 font-light text-muted">
-            This will open your email app with your inquiry ready to review and
-            send. We can discuss the details together. There’s no obligation to
-            order.
+            Your message will be sent securely through our website. We can
+            discuss the details together; there’s no obligation to order.
           </p>
         </form>
       </section>
     </div>
   </div>
 </Layout>
-
-<script>
-  document.addEventListener('submit', (event) => {
-    const form = event.target;
-    if (!(form instanceof HTMLFormElement) || form.id !== 'contact-form') return;
-
-    event.preventDefault();
-    const data = new FormData(form);
-    const name = String(data.get('name') ?? '');
-    const email = String(data.get('email') ?? '');
-    const example = String(data.get('example') ?? '');
-    const message = String(data.get('message') ?? '');
-    const subject = encodeURIComponent(`Handmade inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `${message}\n\n${example ? `Gallery example: ${example}\n` : ''}From: ${name}\nEmail: ${email}`,
-    );
-
-    window.location.href = `mailto:info@herzens-werke.com?subject=${subject}&body=${body}`;
-  });
-</script>
