@@ -73,8 +73,8 @@
     "tags": ["Graduation"],
     "translations": {
       "de": {
-        "title": "Stolze Abschluss-Ente",
-        "alt": "Handgemachte Karte zum Schul- oder Studienabschluss mit einer Ente und Doktorhut",
+        "title": "Die Ente zum Abschluss",
+        "alt": "Handgemachte Karte zum Schul- oder Studienabschluss mit einer Ente im Doktorhut",
         "description": "Handgemachte Karte zum Abschluss mit einer Ente im Doktorhut und dem Spruch „So ducking proud of you!“"
       }
     },
@@ -169,7 +169,7 @@
     "tags": ["Birthday"],
     "translations": {
       "de": {
-        "title": "Maus mit Geburtstags-Cupcake",
+        "title": "Maus mit Geburtstagsmuffin",
         "alt": "Handgemachte Geburtstagskarte mit einer Maus, die die Kerze auf einem Cupcake auspustet",
         "description": "Handgemachte Geburtstagskarte mit einer Maus, die eine Kerze auf einem Cupcake auspustet."
       }

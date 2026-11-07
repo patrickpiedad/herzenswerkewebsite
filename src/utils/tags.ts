@@ -23,7 +23,7 @@ const germanTags: Record<string, string> = {
 
 const germanCategories: Record<string, string> = {
   Cards: 'Karten',
-  Decorations: 'Dekoration',
+  Decorations: 'Dekorationen',
   Jewelry: 'Schmuck',
 };
 

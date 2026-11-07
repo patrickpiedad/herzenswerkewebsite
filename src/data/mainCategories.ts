@@ -4,14 +4,14 @@ export const mainCategories = [
     nameDe: 'Karten',
     slug: 'cards',
     description: 'Handmade cards for celebrations, milestones, and everyday moments.',
-    descriptionDe: 'Handgemachte Karten für Feste, besondere Meilensteine und alltägliche Momente.',
+    descriptionDe: 'Handgemachte Karten für Feste, besondere Anlässe und den Alltag.',
   },
   {
     name: 'Decorations',
-    nameDe: 'Dekoration',
+    nameDe: 'Dekorationen',
     slug: 'decorations',
     description: 'Handmade details for the home, garden, and special occasions.',
-    descriptionDe: 'Handgemachte Details für Zuhause, Garten und besondere Anlässe.',
+    descriptionDe: 'Handgemachte Deko für Zuhause, den Garten und besondere Anlässe.',
   },
   {
     name: 'Jewelry',
