@@ -85,26 +85,52 @@ All commands are run from the root of the project, from a terminal:
 
 ## 🛠️ Development
 
-### Adding New Images
+### Adding handmade work to the gallery
 
-Edit `src/data/gallery.json` to add new images:
+1. Copy the photo into `public/gallery/`. Use a short, descriptive filename
+   with no spaces, such as `blue-floral-birthday-card.jpg`.
+2. Add an entry to `src/data/gallery.json`:
 
 ```json
 {
-  "src": "https://example.com/image.jpg",
-  "alt": "Image description",
-  "title": "Image Title",
-  "description": "Detailed description of the image",
-  "categories": ["Primary Tag", "Secondary Tag"],
-  "date": "2024-01-01",
-  "photographer": "Photographer Name",
-  "photographerLink": "https://photographer-website.com"
+  "src": "/gallery/blue-floral-birthday-card.jpg",
+  "alt": "Handmade birthday card with blue flowers and a white ribbon",
+  "title": "Blue Floral Birthday Card",
+  "description": "A handmade birthday card decorated with layered blue paper flowers.",
+  "categories": ["Cards", "Birthday"],
+  "date": "2026-11-07"
 }
 ```
 
+Use a unique title, describe what is visible in `alt`, and add one or more
+categories. The date is the creation date in `YYYY-MM-DD` format. Photographer
+fields are only needed when crediting someone else.
+
+For a video, copy both the video and a still image to `public/gallery/`, then
+add `mediaType` and `poster`:
+
+```json
+{
+  "src": "/gallery/paper-flower-making.mp4",
+  "mediaType": "video",
+  "poster": "/gallery/paper-flower-making-poster.jpg",
+  "alt": "A paper flower being assembled by hand",
+  "title": "Making a Paper Flower",
+  "description": "A short look at assembling a layered paper flower.",
+  "categories": ["Decorations", "Behind the Scenes"],
+  "date": "2026-11-07"
+}
+```
+
+Video detail pages include playback controls; the poster is used as the gallery
+thumbnail. Keep filenames unique, and use compressed JPG/WebP photos and MP4
+videos so pages remain quick to load. After adding files and entries, run
+`yarn dev` to preview them and `yarn build` to validate before publishing.
+
 ### Image Validation
 
-The project includes automatic image URL validation:
+The project checks remote image URLs and verifies that local gallery images,
+videos, and video posters exist:
 
 - Run `yarn check-images` to verify all URLs are accessible
 - Validation runs automatically during build process

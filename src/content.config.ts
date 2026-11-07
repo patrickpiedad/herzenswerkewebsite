@@ -31,8 +31,13 @@ const gallery = defineCollection({
     description: z.string(),
     categories: z.array(z.string()).min(1),
     date: z.string(),
-    photographer: z.string(),
+    mediaType: z.enum(["image", "video"]).optional(),
+    poster: z.string().optional(),
+    photographer: z.string().optional(),
     photographerLink: z.string().optional(),
+  }).refine((item) => item.mediaType !== "video" || Boolean(item.poster), {
+    message: "Video gallery items must include a poster image.",
+    path: ["poster"],
   }),
 });
 

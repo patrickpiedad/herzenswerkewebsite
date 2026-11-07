@@ -4,21 +4,24 @@ import fs from 'fs';
 import https from 'https';
 import http from 'http';
 import { URL } from 'url';
+import path from 'path';
 
 interface GalleryImage {
-  id: number;
+  id: string;
   src: string;
+  mediaType?: 'image' | 'video';
+  poster?: string;
   alt: string;
   title: string;
   description: string;
   categories: string[];
   date: string;
-  photographer: string;
+  photographer?: string;
   photographerLink?: string;
 }
 
 interface ValidationResult {
-  id: number;
+  id: string;
   title: string;
   url: string;
   status: number;
@@ -34,54 +37,71 @@ const galleryData: GalleryImage[] = JSON.parse(
 console.log(`\n🔍 Checking ${galleryData.length} image URLs...\n`);
 
 async function checkImageUrl(imageData: GalleryImage): Promise<ValidationResult> {
-  return new Promise((resolve) => {
-    const url = new URL(imageData.src);
-    const client = url.protocol === 'https:' ? https : http;
-    
-    const req = client.request(url, { method: 'HEAD' }, (res) => {
-      const status = res.statusCode || 0;
-      const isOk = status >= 200 && status < 300;
-      
+  const mediaPaths = [
+    { label: imageData.mediaType === 'video' ? 'video' : 'image', src: imageData.src },
+    ...(imageData.mediaType === 'video' && imageData.poster
+      ? [{ label: 'poster', src: imageData.poster }]
+      : []),
+  ];
+
+  const checks = await Promise.all(mediaPaths.map(async ({ label, src }) => {
+    if (src.startsWith('/')) {
+      const localPath = path.resolve(process.cwd(), 'public', src.slice(1));
+      const exists = fs.existsSync(localPath);
       console.log(
-        `${isOk ? '✅' : '❌'} ID ${imageData.id}: ${imageData.title} - ${status} ${res.statusMessage || 'Unknown'}`
+        `${exists ? '✅' : '❌'} ${imageData.title} (${label}) - ${
+          exists ? 'local media found' : 'file not found'
+        }`,
       );
-      
-      resolve({
-        id: imageData.id,
-        title: imageData.title,
-        url: imageData.src,
-        status: status,
-        ok: isOk
+      return exists;
+    }
+
+    let url: URL;
+    try {
+      url = new URL(src);
+    } catch (error) {
+      console.error(`❌ ${imageData.title} (${label}) - invalid URL: ${src}`, error);
+      return false;
+    }
+    const client = url.protocol === 'https:' ? https : http;
+
+    return new Promise<boolean>((resolve) => {
+      const req = client.request(url, { method: 'HEAD' }, (res) => {
+        const status = res.statusCode || 0;
+        const isOk = status >= 200 && status < 300;
+
+        console.log(
+          `${isOk ? '✅' : '❌'} ${imageData.title} (${label}) - ${status} ${
+            res.statusMessage || 'Unknown'
+          }`,
+        );
+        resolve(isOk);
       });
-    });
-    
-    req.on('error', (err: Error) => {
-      console.log(`❌ ID ${imageData.id}: ${imageData.title} - ERROR: ${err.message}`);
-      resolve({
-        id: imageData.id,
-        title: imageData.title,
-        url: imageData.src,
-        status: 0,
-        ok: false,
-        error: err.message
+
+      req.on('error', (err: Error) => {
+        console.log(`❌ ${imageData.title} (${label}) - ERROR: ${err.message}`);
+        resolve(false);
       });
-    });
-    
-    req.setTimeout(10000, () => {
-      console.log(`⏰ ID ${imageData.id}: ${imageData.title} - TIMEOUT`);
-      req.destroy();
-      resolve({
-        id: imageData.id,
-        title: imageData.title,
-        url: imageData.src,
-        status: 0,
-        ok: false,
-        error: 'Timeout'
+
+      req.setTimeout(10000, () => {
+        console.log(`⏰ ${imageData.title} (${label}) - TIMEOUT`);
+        req.destroy();
+        resolve(false);
       });
+
+      req.end();
     });
-    
-    req.end();
-  });
+  }));
+  const ok = checks.every(Boolean);
+
+  return {
+    id: imageData.id,
+    title: imageData.title,
+    url: imageData.src,
+    status: ok ? 200 : 0,
+    ok,
+    error: ok ? undefined : 'One or more media files or URLs failed validation',
+  };
 }
 
 // Main validation function

@@ -1,109 +1,107 @@
+
 [
   {
-    "src": "https://images.unsplash.com/photo-1601388152430-4ad0f14c0788?q=80&w=720&auto=format&fit=crop",
-    "alt": "Abstract macro of swirling light blue and white liquid paint lines against a black background",
-    "title": "Blue Fluid Trails",
-    "description": "Close-up of fluid acrylic pour art: thin cyan and white trails curve across a dark field, with tiny white specks that read like glitter or distant stars.",
-    "categories": [
-      "Art"    
-    ],
-    "date": "2024-03-15",
-    "photographer": "Solen Feyissa",
-    "photographerLink": "https://unsplash.com/@solenfeyissa"
+    "src": "/gallery/pig-rocket.jpeg",
+    "alt": "Handmade card featuring a pink pig riding a colorful rocket",
+    "title": "Pig Rocket",
+    "description": "Handmade watercolor card featuring a playful pink pig flying through the sky on a colorful rocket.",
+    "categories": ["Cards", "Birthday"],
+    "date": "2026-11-07"
   },
   {
-    "src": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df",
-    "alt": "Aerial view of the Chicago skyline beside Lake Michigan under a pink and purple sunset sky",
-    "title": "Chicago Skyline at Sunset",
-    "description": "High-angle photograph of downtown Chicago at golden hour, with the Willis Tower and neighboring skyscrapers catching warm light against Lake Michigan.",
-    "categories": [
-      "Urban"
-    ],
-    "date": "2024-02-20",
-    "photographer": "Pedro Lastra",
-    "photographerLink": "https://unsplash.com/@peterlaster"
+    "src": "/gallery/colorful-houses.jpeg",
+    "alt": "Handmade watercolor card featuring three colorful houses",
+    "title": "Colorful Houses",
+    "description": "Handmade watercolor card featuring three charming colorful houses and green trees.",
+    "categories": ["Cards", "Everyday"],
+    "date": "2026-11-07"
   },
   {
-    "src": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    "alt": "Tropical beach at sunset with a gentle wave on white sand and turquoise water under a soft orange sky",
-    "title": "Tropical Beach at Golden Hour",
-    "description": "A quiet shoreline where wet sand meets calm turquoise water. The sun sits low on the horizon beside a dark silhouette of palms.",
-    "categories": [
-      "Nature"
-    ],
-    "date": "2024-01-10",
-    "photographer": "Sean Oulashin",
-    "photographerLink": "https://unsplash.com/@oulashin"
+    "src": "/gallery/christmas-mailbox.jpeg",
+    "alt": "Handmade Christmas card featuring a festive mailbox, bicycle, and presents",
+    "title": "Christmas Mailbox",
+    "description": "Handmade Christmas card with a decorated mailbox, bicycle carrying a Christmas tree, and wrapped presents.",
+    "categories": ["Cards", "Christmas"],
+    "date": "2026-11-07"
   },
   {
-    "src": "https://images.unsplash.com/photo-1489378982447-6bd6cca9ed93?q=80&w=720&auto=format&fit=crop",
-    "alt": "Macro close-up of a cluster of glowing pink, orange, blue, and green miniature light bulbs",
-    "title": "Colorful Fairy Lights",
-    "description": "A dense bundle of miniature holiday bulbs photographed up close. Shallow depth of field turns the surrounding lights into colorful bokeh.",
-    "categories": [
-      "Art"
-    ],
-    "date": "2024-03-05",
-    "photographer": "Becca Romine",
-    "photographerLink": "https://unsplash.com/@brecca85"
+    "src": "/gallery/christmas-bear-wagon.jpeg",
+    "alt": "Handmade Christmas card featuring a blue bear pulling a wagon of presents",
+    "title": "Christmas Bear Wagon",
+    "description": "Handmade watercolor Christmas card featuring a cheerful blue bear pulling a little red wagon filled with gifts.",
+    "categories": ["Cards", "Christmas"],
+    "date": "2026-11-07"
   },
   {
-    "src": "https://images.unsplash.com/photo-1613643971996-c9f6e7d07000?q=80&w=720&auto=format&fit=crop",
-    "alt": "Abstract fluid painting with swirls of red, pink, and white paint and gold glitter",
-    "title": "Crimson Fluid Abstract",
-    "description": "Acrylic-pour marbling in deep reds and pinks, streaked with white and flecks of metallic gold.",
-    "categories": [
-      "Art"
-    ],
-    "date": "2024-02-28",
-    "photographer": "Didssph",
-    "photographerLink": "https://unsplash.com/@didsss"
+    "src": "/gallery/proud-graduate-duck.jpeg",
+    "alt": "Handmade graduation card with a duck wearing a graduation cap",
+    "title": "Proud Graduate Duck",
+    "description": "Handmade graduation card featuring a duck in a graduation cap with the message 'So ducking proud of you!'",
+    "categories": ["Cards", "Graduation"],
+    "date": "2026-11-07"
   },
   {
-    "src": "https://images.unsplash.com/photo-1546182990-dffeafbe841d",
-    "alt": "Side view of an adult male lion with a full mane walking through green grass past a tree",
-    "title": "Male Lion Walking",
-    "description": "A tawny male lion captured mid-stride in a grassy enclosure, its dark mane catching the daylight.",
-    "categories": [
-      "Wildlife"
-    ],
-    "date": "2024-01-25",
-    "photographer": "Francesco",
-    "photographerLink": "https://unsplash.com/@detpho"
+    "src": "/gallery/winter-snow-globe.jpeg",
+    "alt": "Handmade winter card featuring a little house inside a snow globe",
+    "title": "Winter Snow Globe",
+    "description": "Handmade watercolor winter card featuring a cozy little house surrounded by trees inside a snow globe.",
+    "categories": ["Cards", "Christmas"],
+    "date": "2026-11-07"
   },
   {
-    "src": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=720&auto=format&fit=crop",
-    "alt": "Seated audience in a darkened conference hall looking toward a presentation",
-    "title": "Conference Audience",
-    "description": "Rows of people sit in a dim indoor venue, facing off-camera toward a stage. A grid of out-of-focus lights fills the wall above them.",
-    "categories": [
-      "Interior"
-    ],
-    "date": "2024-04-12",
-    "photographer": "Headway",
-    "photographerLink": "https://unsplash.com/@headwayio"
+    "src": "/gallery/gingerbread-man.jpeg",
+    "alt": "Handmade Christmas card featuring a smiling gingerbread man",
+    "title": "Gingerbread Man",
+    "description": "Handmade watercolor Christmas card featuring a smiling gingerbread man with decorative icing.",
+    "categories": ["Cards", "Christmas"],
+    "date": "2026-11-07"
   },
   {
-    "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=720&auto=format&fit=crop",
-    "alt": "Snow-dusted mountain peaks rising above a thick sea of clouds at sunrise",
-    "title": "Alpine Peaks Above Clouds",
-    "description": "Jagged alpine summits pierce a valley filled with inversion cloud, photographed from a high ridge under an orange and lavender sky in Randa, Switzerland.",
-    "categories": [
-      "Nature"
-    ],
-    "date": "2024-03-22",
-    "photographer": "Sam Ferrara",
-    "photographerLink": "https://unsplash.com/@samferrara"
+    "src": "/gallery/christmas-tree-jar.jpeg",
+    "alt": "Handmade Christmas card featuring a miniature Christmas tree inside a hanging glass jar",
+    "title": "Christmas Tree Jar",
+    "description": "Handmade watercolor Christmas card featuring a little Christmas tree inside a hanging glass jar with the greeting 'Frohe Weihnachten'.",
+    "categories": ["Cards", "Christmas"],
+    "date": "2026-11-07"
   },
   {
-    "src": "https://images.unsplash.com/photo-1554080353-a576cf803bda?q=80&w=720&auto=format&fit=crop",
-    "alt": "Woman in a camouflage jacket holding a Canon DSLR to her eye against a blurred city night backdrop",
-    "title": "Night Photographer",
-    "description": "A photographer shoots during blue hour. City windows and streetlights fall out of focus behind her, leaving warm bokeh against cool urban blues.",
-    "categories": [
-      "Urban"
-    ],
-    "date": "2024-04-08",
-    "photographer": "Unsplash Photographer"
+    "src": "/gallery/birthday-party-llama.jpeg",
+    "alt": "Handmade birthday card featuring a llama carrying a cake and colorful presents",
+    "title": "Birthday Party Llama",
+    "description": "Handmade birthday card featuring a festive llama wearing a party hat and carrying a birthday cake and presents.",
+    "categories": ["Cards", "Birthday"],
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/new-year-sled.jpeg",
+    "alt": "Handmade New Year card featuring a sled with a lucky clover and a bottle",
+    "title": "New Year Sled",
+    "description": "Handmade New Year card featuring a sled carrying a bottle decorated with a lucky four-leaf clover and a red ribbon.",
+    "categories": ["Cards", "Happy New Year"],
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/birthday-cupcake-mouse.jpeg",
+    "alt": "Handmade birthday card with a mouse blowing out a cupcake candle",
+    "title": "Birthday Cupcake Mouse",
+    "description": "Handmade birthday card with a mouse blowing out a cupcake candle.",
+    "categories": ["Cards", "Birthday"],
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/christmas-cat.jpeg",
+    "alt": "Handmade Christmas card featuring a cute cat wearing a winter hat and scarf",
+    "title": "Christmas Cat",
+    "description": "Handmade watercolor Christmas card featuring a smiling cat in a colorful winter hat and scarf with the greeting 'Frohe Weihnachten'.",
+    "categories": ["Cards", "Christmas"],
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/sau-viel-glueck-neuen-jahr.jpeg",
+    "alt": "Handmade New Year card with five pigs wishing Sau viel Glück im neuen Jahr",
+    "title": "Sau viel Glück im neuen Jahr!",
+    "description": "Handmade New Year card featuring five cheerful pigs wishing 'Sau viel Glück im neuen Jahr!'",
+    "categories": ["Cards", "Happy New Year"],
+    "date": "2026-11-07"
   }
 ]

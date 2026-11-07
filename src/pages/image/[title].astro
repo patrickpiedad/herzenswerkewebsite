@@ -38,14 +38,20 @@ export async function getStaticPaths() {
 const { image, related } = Astro.props;
 const { BASE_URL } = import.meta.env;
 const categoryLabel = formatCategories(image);
+const isVideo = image.mediaType === 'video';
+const isLocalAsset = image.src.startsWith('/');
 
-const largeUrl = new URL(image.src, 'https://images.unsplash.com');
-largeUrl.searchParams.set('w', '2400');
-largeUrl.searchParams.set('q', '80');
-largeUrl.searchParams.set('fit', 'max');
-largeUrl.searchParams.delete('h');
-largeUrl.searchParams.delete('crop');
-const largeSrc = largeUrl.toString();
+const largeSrc = isLocalAsset
+  ? image.src
+  : (() => {
+      const url = new URL(image.src, 'https://images.unsplash.com');
+      url.searchParams.set('w', '2400');
+      url.searchParams.set('q', '80');
+      url.searchParams.set('fit', 'max');
+      url.searchParams.delete('h');
+      url.searchParams.delete('crop');
+      return url.toString();
+    })();
 ---
 
 <Layout title={`${image.title} — Frame Shift`}>
@@ -65,7 +71,7 @@ const largeSrc = largeUrl.toString();
           d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
           clip-rule="evenodd"></path>
       </svg>
-      Back to Gallery
+      Back to Home
     </a>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
@@ -73,21 +79,45 @@ const largeSrc = largeUrl.toString();
         class="lg:col-span-2 overflow-hidden rounded-lg max-h-[85vh] flex items-center justify-center bg-transparent"
         transition:name={`image-${image.id}`}
       >
-        <button
-          type="button"
-          class="zoom-trigger"
-          popovertarget="image-zoom"
-          aria-label={`View larger: ${image.title}`}
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width="800"
-            height="800"
-            class="w-auto h-auto object-contain max-h-[85vh] max-w-full"
-            loading="eager"
-          />
-        </button>
+        {
+          isVideo ? (
+            <video
+              class="h-auto max-h-[85vh] max-w-full"
+              controls
+              playsinline
+              preload="metadata"
+              poster={image.poster}
+            >
+              <source src={image.src} />
+              Your browser does not support video playback.
+            </video>
+          ) : (
+            <button
+              type="button"
+              class="zoom-trigger"
+              popovertarget="image-zoom"
+              aria-label={`View larger: ${image.title}`}
+            >
+              {isLocalAsset ? (
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  class="h-auto max-h-[85vh] max-w-full object-contain"
+                  loading="eager"
+                />
+              ) : (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width="800"
+                  height="800"
+                  class="w-auto h-auto object-contain max-h-[85vh] max-w-full"
+                  loading="eager"
+                />
+              )}
+            </button>
+          )
+        }
       </div>
 
       <div class="lg:col-span-1 py-4 lg:sticky lg:top-8">
@@ -136,12 +166,10 @@ const largeSrc = largeUrl.toString();
             >
           </div>
 
-          <div class="flex">
-            <span class="font-medium w-28 text-muted"
-              >Photo by:</span
-            >
-            {
-              image.photographerLink ? (
+          {image.photographer && (
+            <div class="flex">
+              <span class="font-medium w-28 text-muted">Photo by:</span>
+              {image.photographerLink ? (
                 <a
                   href={image.photographerLink}
                   target="_blank"
@@ -151,12 +179,10 @@ const largeSrc = largeUrl.toString();
                   {image.photographer}
                 </a>
               ) : (
-                <span class="text-ink/80 font-light">
-                  {image.photographer}
-                </span>
-              )
-            }
-          </div>
+                <span class="text-ink/80 font-light">{image.photographer}</span>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -176,14 +202,38 @@ const largeSrc = largeUrl.toString();
                   transition:name={`image-${image.id}`}
                 >
                   <div class="overflow-hidden relative">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      loading={i < 5 ? 'eager' : 'lazy'}
-                      width="800"
-                      height="800"
-                      class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-102"
-                    />
+                    {image.mediaType === 'video' ? (
+                      <div class="relative">
+                        <img
+                          src={image.poster}
+                          alt={image.alt}
+                          loading={i < 5 ? 'eager' : 'lazy'}
+                          class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-102"
+                        />
+                        <span
+                          class="absolute inset-0 flex items-center justify-center text-white"
+                          aria-hidden="true"
+                        >
+                          ▶
+                        </span>
+                      </div>
+                    ) : image.src.startsWith('/') ? (
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading={i < 5 ? 'eager' : 'lazy'}
+                        class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-102"
+                      />
+                    ) : (
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        loading={i < 5 ? 'eager' : 'lazy'}
+                        width="800"
+                        height="800"
+                        class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-102"
+                      />
+                    )}
                     <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
                       <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
                         <h3 class="text-lg font-medium mb-1">{image.title}</h3>
@@ -203,17 +253,21 @@ const largeSrc = largeUrl.toString();
   </div>
 </Layout>
 
-<div id="image-zoom" popover class="zoom-popover">
-  <button
-    type="button"
-    class="zoom-backdrop"
-    popovertarget="image-zoom"
-    popovertargetaction="hide"
-    aria-label="Close larger image"
-  >
-    <img src={largeSrc} alt={image.alt} />
-  </button>
-</div>
+{
+  !isVideo && (
+    <div id="image-zoom" popover class="zoom-popover">
+      <button
+        type="button"
+        class="zoom-backdrop"
+        popovertarget="image-zoom"
+        popovertargetaction="hide"
+        aria-label="Close larger image"
+      >
+        <img src={largeSrc} alt={image.alt} />
+      </button>
+    </div>
+  )
+}
 
 <style>
   .zoom-trigger {
@@ -299,4 +353,3 @@ const largeSrc = largeUrl.toString();
     object-fit: contain;
   }
 </style>
-
