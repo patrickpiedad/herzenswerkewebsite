@@ -7,24 +7,15 @@ import { URL } from 'url';
 import path from 'path';
 
 interface GalleryImage {
-  id: string;
   src: string;
   mediaType?: 'image' | 'video';
   poster?: string;
-  alt: string;
   title: string;
-  description: string;
-  categories: string[];
-  date: string;
-  photographer?: string;
-  photographerLink?: string;
 }
 
 interface ValidationResult {
-  id: string;
   title: string;
   url: string;
-  status: number;
   ok: boolean;
   error?: string;
 }
@@ -95,10 +86,8 @@ async function checkImageUrl(imageData: GalleryImage): Promise<ValidationResult>
   const ok = checks.every(Boolean);
 
   return {
-    id: imageData.id,
     title: imageData.title,
     url: imageData.src,
-    status: ok ? 200 : 0,
     ok,
     error: ok ? undefined : 'One or more media files or URLs failed validation',
   };
@@ -123,7 +112,7 @@ async function validateImages(): Promise<void> {
     if (failed.length > 0) {
       console.log(`\n❌ Failed images:`);
       failed.forEach(f => {
-        console.log(`  - ID ${f.id}: ${f.title}`);
+        console.log(`  - ${f.title}`);
         console.log(`    URL: ${f.url}`);
         if (f.error) console.log(`    Error: ${f.error}`);
       });
