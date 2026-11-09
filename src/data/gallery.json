@@ -1,4 +1,3 @@
-
 [
   {
     "src": "/gallery/pig-rocket.jpeg",
@@ -6,7 +5,9 @@
     "title": "Pig Rocket",
     "description": "Handmade watercolor card featuring a playful pink pig flying through the sky on a colorful rocket.",
     "mainCategory": "Cards",
-    "tags": ["Birthday"],
+    "tags": [
+      "Birthday"
+    ],
     "translations": {
       "de": {
         "title": "Raketenflug mit Schweinchen",
@@ -22,7 +23,9 @@
     "title": "Colorful Houses",
     "description": "Handmade watercolor card featuring three charming colorful houses and green trees.",
     "mainCategory": "Cards",
-    "tags": ["Everyday"],
+    "tags": [
+      "Everyday"
+    ],
     "translations": {
       "de": {
         "title": "Bunte Häuser",
@@ -38,7 +41,9 @@
     "title": "Christmas Mailbox",
     "description": "Handmade Christmas card with a decorated mailbox, bicycle carrying a Christmas tree, and wrapped presents.",
     "mainCategory": "Cards",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Weihnachtlicher Briefkasten",
@@ -54,7 +59,9 @@
     "title": "Christmas Bear Wagon",
     "description": "Handmade watercolor Christmas card featuring a cheerful blue bear pulling a little red wagon filled with gifts.",
     "mainCategory": "Cards",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Bär mit Geschenkwagen",
@@ -70,7 +77,9 @@
     "title": "Proud Graduate Duck",
     "description": "Handmade graduation card featuring a duck in a graduation cap with the message 'So ducking proud of you!'",
     "mainCategory": "Cards",
-    "tags": ["Graduation"],
+    "tags": [
+      "Graduation"
+    ],
     "translations": {
       "de": {
         "title": "Die Ente zum Abschluss",
@@ -86,7 +95,9 @@
     "title": "Winter Snow Globe",
     "description": "Handmade watercolor winter card featuring a cozy little house surrounded by trees inside a snow globe.",
     "mainCategory": "Cards",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Winterliche Schneekugel",
@@ -102,7 +113,9 @@
     "title": "Gingerbread Man",
     "description": "Handmade watercolor Christmas card featuring a smiling gingerbread man with decorative icing.",
     "mainCategory": "Cards",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Lebkuchenmann",
@@ -118,7 +131,9 @@
     "title": "Christmas Tree Jar",
     "description": "Handmade watercolor Christmas card featuring a little Christmas tree inside a hanging glass jar with the greeting 'Frohe Weihnachten'.",
     "mainCategory": "Cards",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Weihnachtsbaum im Glas",
@@ -134,7 +149,9 @@
     "title": "Birthday Party Llama",
     "description": "Handmade birthday card featuring a festive llama wearing a party hat and carrying a birthday cake and presents.",
     "mainCategory": "Cards",
-    "tags": ["Birthday"],
+    "tags": [
+      "Birthday"
+    ],
     "translations": {
       "de": {
         "title": "Geburtstagslama",
@@ -150,7 +167,9 @@
     "title": "New Year Sled",
     "description": "Handmade New Year card featuring a sled carrying a bottle decorated with a lucky four-leaf clover and a red ribbon.",
     "mainCategory": "Cards",
-    "tags": ["Happy New Year"],
+    "tags": [
+      "Happy New Year"
+    ],
     "translations": {
       "de": {
         "title": "Neujahrsschlitten",
@@ -166,7 +185,9 @@
     "title": "Birthday Cupcake Mouse",
     "description": "Handmade birthday card with a mouse blowing out a cupcake candle.",
     "mainCategory": "Cards",
-    "tags": ["Birthday"],
+    "tags": [
+      "Birthday"
+    ],
     "translations": {
       "de": {
         "title": "Maus mit Geburtstagsmuffin",
@@ -182,7 +203,9 @@
     "title": "Christmas Cat",
     "description": "Handmade watercolor Christmas card featuring a smiling cat in a colorful winter hat and scarf with the greeting 'Frohe Weihnachten'.",
     "mainCategory": "Cards",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Weihnachtskatze",
@@ -193,12 +216,14 @@
     "date": "2026-11-07"
   },
   {
-    "src": "/gallery/sau-viel-glueck-neuen-jahr.jpeg",
-    "alt": "Handmade New Year card with five pigs wishing Sau viel Glück im neuen Jahr",
-    "title": "Sau viel Glück im neuen Jahr!",
-    "description": "Handmade New Year card featuring five cheerful pigs wishing 'Sau viel Glück im neuen Jahr!'",
+    "src": "/gallery/good-luck-new-year-card.jpeg",
+    "alt": "Handmade New Year card with five cheerful pigs and the German greeting 'Sau viel Glück im neuen Jahr'",
+    "title": "Good Luck for the New Year",
+    "description": "Handmade New Year card featuring five cheerful pigs and the greeting 'Sau viel Glück im neuen Jahr' (Good luck for the new year).",
     "mainCategory": "Cards",
-    "tags": ["Happy New Year"],
+    "tags": [
+      "Happy New Year"
+    ],
     "translations": {
       "de": {
         "title": "Sau viel Glück im neuen Jahr!",
@@ -214,7 +239,9 @@
     "title": "White Paper Star",
     "description": "Handcrafted white paper star featuring delicate geometric folds and a warm, soft glow.",
     "mainCategory": "Decorations",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Weißer Papierstern",
@@ -230,7 +257,9 @@
     "title": "Red & Yellow Paper Star",
     "description": "Handcrafted illuminated paper star combining vibrant red, yellow, and white paper in a beautiful geometric design.",
     "mainCategory": "Decorations",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Rot-gelber Papierstern",
@@ -246,7 +275,9 @@
     "title": "Red Paper Star",
     "description": "Handcrafted red paper star with warm yellow accents, intricate folded points, and a cozy illuminated glow.",
     "mainCategory": "Decorations",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Roter Papierstern",
@@ -262,7 +293,9 @@
     "title": "Glowing Paper Stars",
     "description": "A festive arrangement of three handcrafted illuminated paper stars in warm red, yellow, and soft white.",
     "mainCategory": "Decorations",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Leuchtende Papiersterne",
@@ -278,7 +311,9 @@
     "title": "Colorful Paper Stars",
     "description": "A colorful collection of handcrafted illuminated paper stars featuring detailed folds and warm festive lighting.",
     "mainCategory": "Decorations",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Bunte Papiersterne",
@@ -294,12 +329,734 @@
     "title": "White Star Display",
     "description": "A beautifully folded white paper star glowing softly in front of vibrant red and yellow illuminated stars.",
     "mainCategory": "Decorations",
-    "tags": ["Christmas"],
+    "tags": [
+      "Christmas"
+    ],
     "translations": {
       "de": {
         "title": "Weißer Stern im Lichterglanz",
         "alt": "Handgefertigter leuchtender weißer Papierstern vor rot-gelben Sternen",
         "description": "Kunstvoll gefalteter weißer Papierstern, der vor leuchtenden rot-gelben Sternen sanft erstrahlt."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/watercolor-flower-bouquet.jpeg",
+    "alt": "Handmade watercolor card featuring a colorful bouquet of watercolor flowers and leaves",
+    "title": "Watercolor Flower Bouquet",
+    "description": "Handmade watercolor card featuring a colorful bouquet of watercolor flowers and leaves.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Everyday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Bunter Aquarellblumenstrauß",
+        "alt": "Handgemalte Karte: Ein bunter Strauß aus Aquarellblumen und Blättern.",
+        "description": "Handgemalte Aquarellkarte: Ein bunter Strauß aus Aquarellblumen und Blättern."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/welcome-baby-mobile.jpeg",
+    "alt": "Handmade watercolor card featuring a hanging baby mobile with little animals and a welcome greeting",
+    "title": "Welcome Baby Mobile",
+    "description": "Handmade watercolor card featuring a hanging baby mobile with little animals and a welcome greeting.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Willkommen-Babymobile",
+        "alt": "Handgemalte Karte: Ein liebevoll gestaltetes Babymobile mit kleinen Tieren und einem Willkommensgruß.",
+        "description": "Handgemalte Aquarellkarte: Ein liebevoll gestaltetes Babymobile mit kleinen Tieren und einem Willkommensgruß."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/baby-elephant-name.jpeg",
+    "alt": "Handmade watercolor card featuring a little elephant peeking over a personalized name sign",
+    "title": "Baby Elephant Name Card",
+    "description": "Handmade watercolor card featuring a little elephant peeking over a personalized name sign.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Baby-Elefant mit Namensschild",
+        "alt": "Handgemalte Karte: Ein kleiner Elefant schaut über ein personalisierbares Namensschild.",
+        "description": "Handgemalte Aquarellkarte: Ein kleiner Elefant schaut über ein personalisierbares Namensschild."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/fox-winter-window.jpeg",
+    "alt": "Handmade watercolor card featuring a fox enjoying a warm drink beside a snowy window",
+    "title": "Fox at the Winter Window",
+    "description": "Handmade watercolor card featuring a fox enjoying a warm drink beside a snowy window.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Fuchs am Winterfenster",
+        "alt": "Handgemalte Karte: Ein kleiner Fuchs genießt ein warmes Getränk am verschneiten Fenster.",
+        "description": "Handgemalte Aquarellkarte: Ein kleiner Fuchs genießt ein warmes Getränk am verschneiten Fenster."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/christmas-tree-hanging-jar.jpeg",
+    "alt": "Handmade watercolor card featuring a little Christmas tree in a hanging glass jar",
+    "title": "Christmas Tree in a Jar",
+    "description": "Handmade watercolor card featuring a little Christmas tree in a hanging glass jar.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Weihnachtsbaum im Hängeglas",
+        "alt": "Handgemalte Karte: Ein kleiner Weihnachtsbaum in einem hängenden Glas.",
+        "description": "Handgemalte Aquarellkarte: Ein kleiner Weihnachtsbaum in einem hängenden Glas."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/ocean-baby-mobile.jpeg",
+    "alt": "Handmade watercolor card featuring a sea-themed baby mobile with colorful fish and a whale",
+    "title": "Ocean Baby Mobile",
+    "description": "Handmade watercolor card featuring a sea-themed baby mobile with colorful fish and a whale.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Babymobile mit Meerestieren",
+        "alt": "Handgemalte Karte: Ein maritimes Babymobile mit bunten Fischen und einem Wal.",
+        "description": "Handgemalte Aquarellkarte: Ein maritimes Babymobile mit bunten Fischen und einem Wal."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/christmas-mail-bicycle.jpeg",
+    "alt": "Handmade watercolor card featuring a festive mailbox and a bicycle carrying Christmas gifts",
+    "title": "Christmas Mail by Bicycle",
+    "description": "Handmade watercolor card featuring a festive mailbox and a bicycle carrying Christmas gifts.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Weihnachtspost mit Fahrrad",
+        "alt": "Handgemalte Karte: Ein festlicher Briefkasten und ein Fahrrad mit Weihnachtsgeschenken.",
+        "description": "Handgemalte Aquarellkarte: Ein festlicher Briefkasten und ein Fahrrad mit Weihnachtsgeschenken."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/autumn-coffee-pumpkin.jpeg",
+    "alt": "Handmade watercolor card featuring a cozy cup of coffee beside an autumn pumpkin",
+    "title": "Autumn Coffee and Pumpkin",
+    "description": "Handmade watercolor card featuring a cozy cup of coffee beside an autumn pumpkin.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Autumn"
+    ],
+    "translations": {
+      "de": {
+        "title": "Herbstkaffee mit Kürbis",
+        "alt": "Handgemalte Karte: Eine gemütliche Tasse Kaffee neben einem herbstlichen Kürbis.",
+        "description": "Handgemalte Aquarellkarte: Eine gemütliche Tasse Kaffee neben einem herbstlichen Kürbis."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/cozy-christmas-window.jpeg",
+    "alt": "Handmade watercolor card featuring a snowy window scene with Christmas trees and gifts",
+    "title": "Cozy Christmas Window",
+    "description": "Handmade watercolor card featuring a snowy window scene with Christmas trees and gifts.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Gemütliches Weihnachtsfenster",
+        "alt": "Handgemalte Karte: Ein verschneites Fenster mit Weihnachtsbäumen und Geschenken.",
+        "description": "Handgemalte Aquarellkarte: Ein verschneites Fenster mit Weihnachtsbäumen und Geschenken."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/christmas-cats-window.jpeg",
+    "alt": "Handmade watercolor card featuring four curious cats looking through a decorated Christmas window",
+    "title": "Christmas Cats at the Window",
+    "description": "Handmade watercolor card featuring four curious cats looking through a decorated Christmas window.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Weihnachtskatzen am Fenster",
+        "alt": "Handgemalte Karte: Vier neugierige Katzen schauen durch ein weihnachtlich geschmücktes Fenster.",
+        "description": "Handgemalte Aquarellkarte: Vier neugierige Katzen schauen durch ein weihnachtlich geschmücktes Fenster."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/birthday-bird-card.jpeg",
+    "alt": "Handmade birthday card featuring a little bird beneath the greeting 'Hip Hip' and the number 2",
+    "title": "Birthday Bird Card",
+    "description": "Handmade birthday card showing a cheerful little bird, the greeting 'Hip Hip', and the number 2.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Birthday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Geburtstagskarte mit Vogel",
+        "alt": "Handgemalte Geburtstagskarte mit einem kleinen Vogel, dem Gruß „Hip Hip“ und der Zahl 2.",
+        "description": "Handgemalte Geburtstagskarte mit einem fröhlichen kleinen Vogel, dem Gruß „Hip Hip“ und der Zahl 2."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/autumn-owl-hat.jpeg",
+    "alt": "Handmade watercolor card featuring an owl wearing a warm hat among autumn leaves",
+    "title": "Autumn Owl",
+    "description": "Handmade watercolor card featuring an owl wearing a warm hat among autumn leaves.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Autumn"
+    ],
+    "translations": {
+      "de": {
+        "title": "Herbsteule",
+        "alt": "Handgemalte Karte: Eine Eule mit warmer Mütze zwischen bunten Herbstblättern.",
+        "description": "Handgemalte Aquarellkarte: Eine Eule mit warmer Mütze zwischen bunten Herbstblättern."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/get-well-soon-mouse.jpeg",
+    "alt": "Handmade card showing a mouse holding a red card with a yellow heart",
+    "title": "Get Well Soon Mouse",
+    "description": "Handmade card featuring a mouse holding a red card with a yellow heart and the German greeting 'Gute Besserung' (Get well soon).",
+    "mainCategory": "Cards",
+    "tags": [
+      "Everyday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Gute-Besserung-Maus",
+        "alt": "Handgemalte Karte mit einer Maus, die eine rote Karte mit gelbem Herz und dem Gruß „Gute Besserung“ hält.",
+        "description": "Handgemalte Karte mit einer Maus, die eine rote Karte mit gelbem Herz und dem Gruß „Gute Besserung“ hält."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/christmas-reindeer-snowflakes.jpeg",
+    "alt": "Handmade watercolor card featuring a cheerful reindeer with decorated antlers and snowflakes",
+    "title": "Christmas Reindeer",
+    "description": "Handmade watercolor card featuring a cheerful reindeer with decorated antlers and snowflakes.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Weihnachtsrentier",
+        "alt": "Handgemalte Karte: Ein fröhliches Rentier mit geschmücktem Geweih und Schneeflocken.",
+        "description": "Handgemalte Aquarellkarte: Ein fröhliches Rentier mit geschmücktem Geweih und Schneeflocken."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/christmas-bird-berries.jpeg",
+    "alt": "Handmade watercolor card featuring a small bird in a Santa hat perched beside winter berries",
+    "title": "Christmas Bird with Berries",
+    "description": "Handmade watercolor card featuring a small bird in a Santa hat perched beside winter berries.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Weihnachtsvogel mit Beeren",
+        "alt": "Handgemalte Karte: Ein kleiner Vogel mit Weihnachtsmütze sitzt neben winterlichen Beeren.",
+        "description": "Handgemalte Aquarellkarte: Ein kleiner Vogel mit Weihnachtsmütze sitzt neben winterlichen Beeren."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/christmas-car-tree.jpeg",
+    "alt": "Handmade watercolor card featuring a red car carrying a Christmas tree on its roof",
+    "title": "Christmas Tree on the Car",
+    "description": "Handmade watercolor card featuring a red car carrying a Christmas tree on its roof.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Weihnachtsbaum auf dem Autodach",
+        "alt": "Handgemalte Karte: Ein rotes Auto transportiert einen Weihnachtsbaum auf dem Dach.",
+        "description": "Handgemalte Aquarellkarte: Ein rotes Auto transportiert einen Weihnachtsbaum auf dem Dach."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/graduation-caps.jpeg",
+    "alt": "Handmade watercolor card featuring a graduation card with scattered mortarboards and a congratulatory greeting",
+    "title": "Graduation Caps",
+    "description": "Handmade watercolor card featuring a graduation card with scattered mortarboards and a congratulatory greeting.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Graduation"
+    ],
+    "translations": {
+      "de": {
+        "title": "Abschlusshüte",
+        "alt": "Handgemalte Karte: Eine Glückwunschkarte zum Abschluss mit vielen Doktorhüten.",
+        "description": "Handgemalte Aquarellkarte: Eine Glückwunschkarte zum Abschluss mit vielen Doktorhüten."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/christmas-dog-tree.jpeg",
+    "alt": "Handmade watercolor card featuring a dog in a winter hat sitting beside a Christmas tree and presents",
+    "title": "Christmas Dog",
+    "description": "Handmade watercolor card featuring a dog in a winter hat sitting beside a Christmas tree and presents.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Weihnachtshund",
+        "alt": "Handgemalte Karte: Ein Hund mit Wintermütze sitzt neben Weihnachtsbaum und Geschenken.",
+        "description": "Handgemalte Aquarellkarte: Ein Hund mit Wintermütze sitzt neben Weihnachtsbaum und Geschenken."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/christmas-gnome.jpeg",
+    "alt": "Handmade watercolor card featuring a festive gnome with a long striped hat and Christmas greeting",
+    "title": "Christmas Gnome",
+    "description": "Handmade watercolor card featuring a festive gnome with a long striped hat and Christmas greeting.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Weihnachtswichtel",
+        "alt": "Handgemalte Karte: Ein festlicher Wichtel mit langer gestreifter Mütze und Weihnachtsgruß.",
+        "description": "Handgemalte Aquarellkarte: Ein festlicher Wichtel mit langer gestreifter Mütze und Weihnachtsgruß."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/just-married-car.jpeg",
+    "alt": "Handmade watercolor card featuring a newlywed couple’s car with heart balloons and colorful decorations",
+    "title": "Just Married Car",
+    "description": "Handmade watercolor card featuring a newlywed couple’s car with heart balloons and colorful decorations.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Wedding"
+    ],
+    "translations": {
+      "de": {
+        "title": "Hochzeitsauto „Just Married“",
+        "alt": "Handgemalte Karte: Ein Hochzeitsauto mit Herzballons und buntem Schmuck.",
+        "description": "Handgemalte Aquarellkarte: Ein Hochzeitsauto mit Herzballons und buntem Schmuck."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/birthday-goose-cake.jpeg",
+    "alt": "Watercolor birthday card with a goose holding a cake and wearing a party hat",
+    "title": "Birthday Goose with Cake",
+    "description": "A cheerful goose in a party hat carrying a little birthday cake.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Birthday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Geburtstagsgans mit Torte",
+        "alt": "Aquarellkarte mit einer Gans, Partyhut und Geburtstagstorte",
+        "description": "Eine fröhliche Gans mit Partyhut serviert eine kleine Geburtstagstorte."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/birthday-mouse-champagne.jpeg",
+    "alt": "Hand-painted card with a mouse and a popping sparkling wine bottle",
+    "title": "Birthday Mouse Celebration",
+    "description": "A playful little mouse popping a bottle of bubbly to celebrate.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Birthday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Feiernde Geburtstagsmaus",
+        "alt": "Handgemalte Karte mit einer Maus und einer spritzenden Sektflasche",
+        "description": "Eine kleine Maus lässt zur Feier des Tages die Korken knallen."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/autumn-duck.jpeg",
+    "alt": "Watercolor card showing a duck in a blue sweater among autumn leaves",
+    "title": "Autumn Duck",
+    "description": "A little duck in a cozy blue sweater and boots surrounded by falling autumn leaves.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Autumn"
+    ],
+    "translations": {
+      "de": {
+        "title": "Herbstente",
+        "alt": "Aquarellkarte mit einer Ente im blauen Pullover zwischen Herbstblättern",
+        "description": "Eine kleine Ente im kuscheligen blauen Pullover und Stiefeln genießt das bunte Herbstlaub."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/birthday-cat-sign.jpeg",
+    "alt": "Watercolor birthday card featuring a small cat holding a Happy Birthday sign",
+    "title": "Birthday Cat with Sign",
+    "description": "A sweet little cat holding a hand-lettered Happy Birthday sign.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Birthday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Geburtstagskätzchen",
+        "alt": "Aquarellkarte mit einem Kätzchen und einem Happy-Birthday-Schild",
+        "description": "Ein niedliches Kätzchen überbringt Geburtstagsgrüße auf einem kleinen Schild."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/autumn-hedgehog.jpeg",
+    "alt": "Hand-painted card with a hedgehog holding an autumn bouquet",
+    "title": "Autumn Hedgehog Bouquet",
+    "description": "A tiny hedgehog carrying a bouquet of golden leaves, flowers, and red berries.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Autumn"
+    ],
+    "translations": {
+      "de": {
+        "title": "Igel mit Herbststrauß",
+        "alt": "Handgemalte Karte mit einem Igel und einem herbstlichen Blumenstrauß",
+        "description": "Ein kleiner Igel trägt einen herbstlichen Strauß aus goldenen Blättern, Blüten und roten Beeren."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/fox-lantern.jpeg",
+    "alt": "Watercolor card showing a fox in striped overalls holding a lantern",
+    "title": "Fox with Lantern",
+    "description": "A charming fox in striped overalls carrying a little lantern.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Autumn"
+    ],
+    "translations": {
+      "de": {
+        "title": "Fuchs mit Laterne",
+        "alt": "Aquarellkarte mit einem Fuchs in Latzhose und einer Laterne",
+        "description": "Ein niedlicher Fuchs in gestreifter Latzhose trägt eine kleine Laterne."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/baby-cradle.jpeg",
+    "alt": "Hand-painted baby card showing a little animal in a cradle with flowers",
+    "title": "Baby in Cradle",
+    "description": "A tender illustration of a little animal resting in a vintage cradle among flowers.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Baby in der Wiege",
+        "alt": "Handgemalte Babykarte mit einem Tierbaby in einer Wiege und Blumen",
+        "description": "Eine liebevolle Illustration mit einem kleinen Tierbaby in einer nostalgischen Wiege, umgeben von Blumen."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/baby-dinosaurs.jpeg",
+    "alt": "Watercolor baby card with three cute dinosaurs and colorful bunting",
+    "title": "Baby Dinosaurs",
+    "description": "Three friendly little dinosaurs beneath colorful bunting, with room for a name.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Kleine Dinosaurier",
+        "alt": "Aquarell-Babykarte mit drei kleinen Dinosauriern und einer bunten Wimpelkette",
+        "description": "Drei niedliche Dinosaurier unter einer bunten Wimpelkette – mit Platz für einen Namen."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/birthday-presents.jpeg",
+    "alt": "Hand-painted birthday card covered in colorful wrapped gifts",
+    "title": "Birthday Presents",
+    "description": "Colorful wrapped presents surround a cheerful hand-lettered birthday greeting.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Birthday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Bunte Geburtstagsgeschenke",
+        "alt": "Handgemalte Geburtstagskarte mit vielen bunten Geschenken",
+        "description": "Viele bunt verpackte Geschenke umrahmen einen liebevoll geschriebenen Geburtstagsgruß."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/welcome-baby-animals.jpeg",
+    "alt": "Watercolor welcome baby card with a giraffe, rabbit, lion, and bunting",
+    "title": "Welcome Baby Animals",
+    "description": "A giraffe, bunny, and lion welcome a new baby beneath festive bunting.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Willkommen, Baby!",
+        "alt": "Aquarellkarte zur Geburt mit Giraffe, Hase, Löwe und Wimpelkette",
+        "description": "Giraffe, Häschen und Löwe heißen das Baby unter einer bunten Wimpelkette willkommen."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/market-stall.jpeg",
+    "alt": "Hand-painted card featuring a small market stall with a striped awning",
+    "title": "Little Market Stall",
+    "description": "A charming watercolor market cart with a striped canopy and flowers.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Everyday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Kleiner Marktstand",
+        "alt": "Handgemalte Karte mit einem kleinen Marktstand und gestreiftem Dach",
+        "description": "Ein liebevoll gemalter Marktstand mit gestreiftem Sonnendach und frischen Blumen."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/happy-birthday-lettering.jpeg",
+    "alt": "Hand-lettered Happy Birthday card with colorful decorative letters",
+    "title": "Colorful Happy Birthday",
+    "description": "Bold, colorful hand-lettered birthday wishes with a tiny candle.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Birthday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Bunter Geburtstagsgruß",
+        "alt": "Geburtstagskarte mit buntem Handlettering und einer kleinen Kerze",
+        "description": "Farbenfrohe, kunstvoll gestaltete Buchstaben und eine kleine Kerze wünschen alles Gute zum Geburtstag."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/baby-elephant.jpeg",
+    "alt": "Hand-painted baby card with a peeking gray elephant and bunting",
+    "title": "Little Baby Elephant",
+    "description": "A sweet gray elephant peeking over the edge beneath a string of colorful bunting.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Kleiner Babyelefant",
+        "alt": "Handgemalte Babykarte mit einem neugierigen Elefanten und Wimpelkette",
+        "description": "Ein süßer grauer Elefant schaut neugierig über den Rand, darüber hängt eine bunte Wimpelkette."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/hello-baby-animals.jpeg",
+    "alt": "Watercolor baby card with a giraffe, rabbit, elephant, lion, and Hello Baby lettering",
+    "title": "Hello Baby Animals",
+    "description": "A giraffe, bunny, elephant, and lion gather under colorful bunting to say hello to baby.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Hallo, Baby!",
+        "alt": "Aquarellkarte zur Geburt mit Giraffe, Hase, Elefant und Löwe",
+        "description": "Giraffe, Häschen, Elefant und Löwe begrüßen das Baby unter einer bunten Wimpelkette."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/colorful-christmas-tree.jpeg",
+    "alt": "Hand-painted Christmas card with a colorful striped tree and star",
+    "title": "Colorful Christmas Tree",
+    "description": "A minimalist Christmas tree painted in bright horizontal stripes and topped with a star.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Bunter Weihnachtsbaum",
+        "alt": "Handgemalte Weihnachtskarte mit einem gestreiften bunten Tannenbaum",
+        "description": "Ein fröhlicher Weihnachtsbaum aus bunten Aquarellstreifen, gekrönt von einem Stern."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/paper-airplane-greetings.jpeg",
+    "alt": "Watercolor greeting card with two colorful paper airplanes and German lettering",
+    "title": "Paper Airplane Greetings",
+    "description": "Two colorful paper airplanes carry warm greetings across the card.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Everyday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Liebe Grüße auf Papierfliegern",
+        "alt": "Aquarell-Grußkarte mit zwei bunten Papierfliegern und Schriftzug",
+        "description": "Zwei bunte Papierflieger bringen liebe Grüße auf den Weg."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/slow-down-snail.jpeg",
+    "alt": "Hand-painted card with a yellow snail and the words slow down",
+    "title": "Slow Down Snail",
+    "description": "A cheerful yellow snail with a spiral shell and a gentle reminder to slow down.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Everyday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Schnecke – immer mit der Ruhe",
+        "alt": "Handgemalte Karte mit einer gelben Schnecke und dem Schriftzug slow down",
+        "description": "Eine fröhliche gelbe Schnecke erinnert liebevoll daran, auch mal einen Gang zurückzuschalten."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/birthday-green-bird.jpeg",
+    "alt": "Watercolor birthday card with a round green bird, party hat, and cake",
+    "title": "Birthday Party Bird",
+    "description": "A fluffy green bird wearing a colorful party hat beside a birthday cake.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Birthday"
+    ],
+    "translations": {
+      "de": {
+        "title": "Grüner Geburtstagsvogel",
+        "alt": "Aquarell-Geburtstagskarte mit grünem Vogel, Partyhut und Torte",
+        "description": "Ein flauschiger grüner Vogel mit buntem Partyhut feiert neben einer kleinen Geburtstagstorte."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/wedding-couple.jpeg",
+    "alt": "Hand-painted wedding card showing a couple walking together and a German quote",
+    "title": "Wedding Couple",
+    "description": "A romantic watercolor illustration of a couple walking together, accompanied by a heartfelt German message.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Wedding"
+    ],
+    "translations": {
+      "de": {
+        "title": "Gemeinsam durchs Leben",
+        "alt": "Handgemalte Hochzeitskarte mit einem Paar und einem liebevollen Spruch",
+        "description": "Ein liebevoll gemaltes Paar und ein herzlicher Spruch über den schönsten gemeinsamen Weg."
+      }
+    },
+    "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/just-married-heart.jpeg",
+    "alt": "Hand-painted wedding card with a pastel heart and Just Married calligraphy",
+    "title": "Just Married Heart",
+    "description": "A delicate heart and elegant Just Married lettering on a soft watercolor background.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Wedding"
+    ],
+    "translations": {
+      "de": {
+        "title": "Just Married mit Herz",
+        "alt": "Handgemalte Hochzeitskarte mit pastellfarbenem Herz und Just-Married-Schriftzug",
+        "description": "Ein zartes Herz und schwungvolles Just-Married-Handlettering auf sanftem Aquarellhintergrund."
       }
     },
     "date": "2026-11-09"

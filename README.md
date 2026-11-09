@@ -53,6 +53,9 @@ are discovered from the items in that main category, so add tags freely without
 maintaining a separate tag list. The Home page always shows every item in a
 random order; selecting a main category or tag filters the gallery. Keep the
 original full-resolution photo separately; a resized JPG or WebP loads faster.
+Use lowercase English kebab-case for image filenames and English for the
+primary title, alt text, and description; provide German text in
+`translations.de`.
 The available main categories and their display text are defined in
 `src/data/mainCategories.ts`; add a category there when a new kind of work is
 introduced. Tags such as `Birthday`, `Christmas`, or `Living Room` are free-form

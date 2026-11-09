@@ -10,11 +10,14 @@ export function formatMainCategoryAndTags(img: {
 }
 
 const germanTags: Record<string, string> = {
+  Autumn: 'Herbst',
   Birthday: 'Geburtstag',
+  Baby: 'Baby',
   Christmas: 'Weihnachten',
   Everyday: 'Für jeden Tag',
   Graduation: 'Abschluss',
   'Happy New Year': 'Frohes neues Jahr',
+  Wedding: 'Hochzeit',
   'Behind the Scenes': 'Ein Blick hinter die Kulissen',
   Kitchen: 'Küche',
   'Living Room': 'Wohnzimmer',
