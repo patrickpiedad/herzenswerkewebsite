@@ -1,11 +1,219 @@
 
 [
   {
+    "src": "/gallery/pig-rocket.jpeg",
+    "alt": "Handmade card featuring a pink pig riding a colorful rocket",
+    "title": "Pig Rocket",
+    "description": "Handmade watercolor card featuring a playful pink pig flying through the sky on a colorful rocket.",
+    "mainCategory": "Cards",
+    "tags": ["Birthday"],
+    "translations": {
+      "de": {
+        "title": "Raketenflug mit Schweinchen",
+        "alt": "Handgemachte Karte mit einem rosa Schweinchen auf einer bunten Rakete",
+        "description": "Handgemalte Aquarellkarte mit einem fröhlichen rosa Schweinchen, das auf einer bunten Rakete durch den Himmel fliegt."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/colorful-houses.jpeg",
+    "alt": "Handmade watercolor card featuring three colorful houses",
+    "title": "Colorful Houses",
+    "description": "Handmade watercolor card featuring three charming colorful houses and green trees.",
+    "mainCategory": "Cards",
+    "tags": ["Everyday"],
+    "translations": {
+      "de": {
+        "title": "Bunte Häuser",
+        "alt": "Handgemalte Karte mit drei bunten Häusern",
+        "description": "Handgemalte Aquarellkarte mit drei charmanten bunten Häusern und grünen Bäumen."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/christmas-mailbox.jpeg",
+    "alt": "Handmade Christmas card featuring a festive mailbox, bicycle, and presents",
+    "title": "Christmas Mailbox",
+    "description": "Handmade Christmas card with a decorated mailbox, bicycle carrying a Christmas tree, and wrapped presents.",
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
+    "translations": {
+      "de": {
+        "title": "Weihnachtlicher Briefkasten",
+        "alt": "Handgemachte Weihnachtskarte mit einem festlichen Briefkasten, Fahrrad und Geschenken",
+        "description": "Handgemachte Weihnachtskarte mit einem geschmückten Briefkasten, einem Fahrrad mit Weihnachtsbaum und Geschenken."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/christmas-bear-wagon.jpeg",
+    "alt": "Handmade Christmas card featuring a blue bear pulling a wagon of presents",
+    "title": "Christmas Bear Wagon",
+    "description": "Handmade watercolor Christmas card featuring a cheerful blue bear pulling a little red wagon filled with gifts.",
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
+    "translations": {
+      "de": {
+        "title": "Bär mit Geschenkwagen",
+        "alt": "Handgemachte Weihnachtskarte mit einem blauen Bären, der einen Wagen voller Geschenke zieht",
+        "description": "Handgemalte Weihnachtskarte mit einem fröhlichen blauen Bären, der einen kleinen roten Wagen voller Geschenke zieht."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/proud-graduate-duck.jpeg",
+    "alt": "Handmade graduation card with a duck wearing a graduation cap",
+    "title": "Proud Graduate Duck",
+    "description": "Handmade graduation card featuring a duck in a graduation cap with the message 'So ducking proud of you!'",
+    "mainCategory": "Cards",
+    "tags": ["Graduation"],
+    "translations": {
+      "de": {
+        "title": "Die Ente zum Abschluss",
+        "alt": "Handgemachte Karte zum Schul- oder Studienabschluss mit einer Ente im Doktorhut",
+        "description": "Handgemachte Karte zum Abschluss mit einer Ente im Doktorhut und dem Spruch „So ducking proud of you!“"
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/winter-snow-globe.jpeg",
+    "alt": "Handmade winter card featuring a little house inside a snow globe",
+    "title": "Winter Snow Globe",
+    "description": "Handmade watercolor winter card featuring a cozy little house surrounded by trees inside a snow globe.",
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
+    "translations": {
+      "de": {
+        "title": "Winterliche Schneekugel",
+        "alt": "Handgemalte Winterkarte mit einem kleinen Haus in einer Schneekugel",
+        "description": "Handgemalte Winterkarte mit einem gemütlichen kleinen Haus und Bäumen in einer Schneekugel."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/gingerbread-man.jpeg",
+    "alt": "Handmade Christmas card featuring a smiling gingerbread man",
+    "title": "Gingerbread Man",
+    "description": "Handmade watercolor Christmas card featuring a smiling gingerbread man with decorative icing.",
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
+    "translations": {
+      "de": {
+        "title": "Lebkuchenmann",
+        "alt": "Handgemachte Weihnachtskarte mit einem lächelnden Lebkuchenmann",
+        "description": "Handgemalte Weihnachtskarte mit einem lächelnden Lebkuchenmann und dekorativer Zuckerglasur."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/christmas-tree-jar.jpeg",
+    "alt": "Handmade Christmas card featuring a miniature Christmas tree inside a hanging glass jar",
+    "title": "Christmas Tree Jar",
+    "description": "Handmade watercolor Christmas card featuring a little Christmas tree inside a hanging glass jar with the greeting 'Frohe Weihnachten'.",
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
+    "translations": {
+      "de": {
+        "title": "Weihnachtsbaum im Glas",
+        "alt": "Handgemalte Weihnachtskarte mit einem kleinen Weihnachtsbaum in einem hängenden Glas",
+        "description": "Handgemalte Weihnachtskarte mit einem kleinen Weihnachtsbaum in einem hängenden Glas und dem Gruß „Frohe Weihnachten“."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/birthday-party-llama.jpeg",
+    "alt": "Handmade birthday card featuring a llama carrying a cake and colorful presents",
+    "title": "Birthday Party Llama",
+    "description": "Handmade birthday card featuring a festive llama wearing a party hat and carrying a birthday cake and presents.",
+    "mainCategory": "Cards",
+    "tags": ["Birthday"],
+    "translations": {
+      "de": {
+        "title": "Geburtstagslama",
+        "alt": "Handgemachte Geburtstagskarte mit einem Lama, das Kuchen und bunte Geschenke trägt",
+        "description": "Fröhliche handgemachte Geburtstagskarte mit einem Lama in Partyhut, das Kuchen und Geschenke trägt."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/new-year-sled.jpeg",
+    "alt": "Handmade New Year card featuring a sled with a lucky clover and a bottle",
+    "title": "New Year Sled",
+    "description": "Handmade New Year card featuring a sled carrying a bottle decorated with a lucky four-leaf clover and a red ribbon.",
+    "mainCategory": "Cards",
+    "tags": ["Happy New Year"],
+    "translations": {
+      "de": {
+        "title": "Neujahrsschlitten",
+        "alt": "Handgemachte Neujahrskarte mit einem Schlitten, Kleeblatt und einer Flasche",
+        "description": "Handgemachte Neujahrskarte mit einem Schlitten, auf dem eine Flasche mit vierblättrigem Kleeblatt und roter Schleife liegt."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/birthday-cupcake-mouse.jpeg",
+    "alt": "Handmade birthday card with a mouse blowing out a cupcake candle",
+    "title": "Birthday Cupcake Mouse",
+    "description": "Handmade birthday card with a mouse blowing out a cupcake candle.",
+    "mainCategory": "Cards",
+    "tags": ["Birthday"],
+    "translations": {
+      "de": {
+        "title": "Maus mit Geburtstagsmuffin",
+        "alt": "Handgemachte Geburtstagskarte mit einer Maus, die die Kerze auf einem Cupcake auspustet",
+        "description": "Handgemachte Geburtstagskarte mit einer Maus, die eine Kerze auf einem Cupcake auspustet."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/christmas-cat.jpeg",
+    "alt": "Handmade Christmas card featuring a cute cat wearing a winter hat and scarf",
+    "title": "Christmas Cat",
+    "description": "Handmade watercolor Christmas card featuring a smiling cat in a colorful winter hat and scarf with the greeting 'Frohe Weihnachten'.",
+    "mainCategory": "Cards",
+    "tags": ["Christmas"],
+    "translations": {
+      "de": {
+        "title": "Weihnachtskatze",
+        "alt": "Handgemachte Weihnachtskarte mit einer niedlichen Katze in Wintermütze und Schal",
+        "description": "Handgemalte Weihnachtskarte mit einer lächelnden Katze in bunter Wintermütze und Schal und dem Gruß „Frohe Weihnachten“."
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
+    "src": "/gallery/sau-viel-glueck-neuen-jahr.jpeg",
+    "alt": "Handmade New Year card with five pigs wishing Sau viel Glück im neuen Jahr",
+    "title": "Sau viel Glück im neuen Jahr!",
+    "description": "Handmade New Year card featuring five cheerful pigs wishing 'Sau viel Glück im neuen Jahr!'",
+    "mainCategory": "Cards",
+    "tags": ["Happy New Year"],
+    "translations": {
+      "de": {
+        "title": "Sau viel Glück im neuen Jahr!",
+        "alt": "Handgemachte Neujahrskarte mit fünf Schweinchen und dem Wunsch „Sau viel Glück im neuen Jahr“",
+        "description": "Handgemachte Neujahrskarte mit fünf fröhlichen Schweinchen und dem Wunsch „Sau viel Glück im neuen Jahr!“"
+      }
+    },
+    "date": "2026-11-07"
+  },
+  {
     "src": "/gallery/white-paper-star.jpeg",
     "alt": "Handmade illuminated white paper star with intricate folded points",
     "title": "White Paper Star",
     "description": "Handcrafted white paper star featuring delicate geometric folds and a warm, soft glow.",
-    "mainCategory": "Paper Crafts",
+    "mainCategory": "Decorations",
     "tags": ["Christmas"],
     "translations": {
       "de": {
@@ -21,7 +229,7 @@
     "alt": "Handmade illuminated paper star in red, yellow, and white",
     "title": "Red & Yellow Paper Star",
     "description": "Handcrafted illuminated paper star combining vibrant red, yellow, and white paper in a beautiful geometric design.",
-    "mainCategory": "Paper Crafts",
+    "mainCategory": "Decorations",
     "tags": ["Christmas"],
     "translations": {
       "de": {
@@ -37,7 +245,7 @@
     "alt": "Handmade glowing red paper star with yellow accents",
     "title": "Red Paper Star",
     "description": "Handcrafted red paper star with warm yellow accents, intricate folded points, and a cozy illuminated glow.",
-    "mainCategory": "Paper Crafts",
+    "mainCategory": "Decorations",
     "tags": ["Christmas"],
     "translations": {
       "de": {
@@ -53,7 +261,7 @@
     "alt": "Three handmade illuminated paper stars in red, yellow, and white",
     "title": "Glowing Paper Stars",
     "description": "A festive arrangement of three handcrafted illuminated paper stars in warm red, yellow, and soft white.",
-    "mainCategory": "Paper Crafts",
+    "mainCategory": "Decorations",
     "tags": ["Christmas"],
     "translations": {
       "de": {
@@ -69,7 +277,7 @@
     "alt": "Handmade glowing paper stars arranged in red, yellow, and white",
     "title": "Colorful Paper Stars",
     "description": "A colorful collection of handcrafted illuminated paper stars featuring detailed folds and warm festive lighting.",
-    "mainCategory": "Paper Crafts",
+    "mainCategory": "Decorations",
     "tags": ["Christmas"],
     "translations": {
       "de": {
@@ -85,7 +293,7 @@
     "alt": "Handmade illuminated white paper star displayed in front of glowing red and yellow stars",
     "title": "White Star Display",
     "description": "A beautifully folded white paper star glowing softly in front of vibrant red and yellow illuminated stars.",
-    "mainCategory": "Paper Crafts",
+    "mainCategory": "Decorations",
     "tags": ["Christmas"],
     "translations": {
       "de": {
