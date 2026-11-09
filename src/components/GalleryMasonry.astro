@@ -5,6 +5,7 @@ import {
   formatMainCategoryAndTags,
   germanMainCategoryAndTags,
 } from '../utils/tags';
+import { optimizedGalleryImageSrc } from '../utils/gallery-images';
 
 interface ImageItem {
   id: string;
@@ -46,7 +47,7 @@ const { BASE_URL } = import.meta.env;
               image.mediaType === 'video' ? (
                 <div class="relative">
                   <img
-                    src={image.poster}
+                    src={image.poster ? optimizedGalleryImageSrc(image.poster) : undefined}
                     alt={image.alt}
                     data-en-alt={image.alt}
                     data-de-alt={image.translations?.de?.alt ?? image.alt}
@@ -65,7 +66,7 @@ const { BASE_URL } = import.meta.env;
                 </div>
               ) : image.src.startsWith('/') ? (
                 <img
-                  src={image.src}
+                  src={optimizedGalleryImageSrc(image.src)}
                   alt={image.alt}
                   data-en-alt={image.alt}
                   data-de-alt={image.translations?.de?.alt ?? image.alt}

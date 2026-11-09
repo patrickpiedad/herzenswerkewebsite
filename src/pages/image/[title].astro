@@ -11,6 +11,7 @@ import {
   germanMainCategoryAndTags,
   germanTag,
 } from '../../utils/tags';
+import { optimizedGalleryImageSrc } from '../../utils/gallery-images';
 
 export async function getStaticPaths() {
   const RELATED_LIMIT = 8;
@@ -64,7 +65,7 @@ const dateDe = new Date(image.date).toLocaleDateString('de-DE', {
 });
 
 const largeSrc = isLocalAsset
-  ? image.src
+  ? optimizedGalleryImageSrc(image.src)
   : (() => {
       const url = new URL(image.src, 'https://images.unsplash.com');
       url.searchParams.set('w', '2400');
@@ -111,7 +112,7 @@ const largeSrc = isLocalAsset
               controls
               playsinline
               preload="metadata"
-              poster={image.poster}
+              poster={image.poster ? optimizedGalleryImageSrc(image.poster) : undefined}
             >
               <source src={image.src} />
               <span data-en="Your browser does not support video playback." data-de="Dein Browser unterstützt keine Videowiedergabe.">Your browser does not support video playback.</span>
@@ -127,7 +128,7 @@ const largeSrc = isLocalAsset
             >
               {isLocalAsset ? (
                 <img
-                  src={image.src}
+                  src={optimizedGalleryImageSrc(image.src)}
                   alt={image.alt}
                   data-en-alt={image.alt}
                   data-de-alt={altDe}
@@ -240,7 +241,7 @@ const largeSrc = isLocalAsset
                     {image.mediaType === 'video' ? (
                       <div class="relative">
                         <img
-                          src={image.poster}
+                          src={image.poster ? optimizedGalleryImageSrc(image.poster) : undefined}
                           alt={image.alt}
                           data-en-alt={image.alt}
                           data-de-alt={image.translations?.de?.alt ?? image.alt}
@@ -256,7 +257,7 @@ const largeSrc = isLocalAsset
                       </div>
                     ) : image.src.startsWith('/') ? (
                       <img
-                        src={image.src}
+                        src={optimizedGalleryImageSrc(image.src)}
                         alt={image.alt}
                         data-en-alt={image.alt}
                         data-de-alt={image.translations?.de?.alt ?? image.alt}

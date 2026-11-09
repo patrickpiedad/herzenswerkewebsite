@@ -24,7 +24,7 @@ The build checks gallery media and creates the static site in `dist/`.
 
 ## Add a creation to the gallery
 
-1. Copy a web-sized photo into `public/gallery/` (for example,
+1. Copy a photo into `public/gallery/` (for example,
    `blue-floral-card.jpg`).
 2. Add an entry to `src/data/gallery.json`:
 
@@ -59,7 +59,10 @@ introduced. Tags such as `Birthday`, `Christmas`, or `Living Room` are free-form
 and only appear as filters for the main category where they are used.
 The German labels for common tags are in `src/utils/tags.ts`; add a German label
 there for each new tag. Add German `title`, `alt`, and `description` values in
-`translations.de` for each creation.
+`translations.de` for each creation. `yarn dev` and the build commands
+automatically create WebP copies (up to 1600 pixels, quality 82) for gallery
+photos and video posters. The originals stay unchanged, so there is no need to
+resize or convert photos by hand.
 
 ### Add a video
 
