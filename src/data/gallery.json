@@ -1060,5 +1060,131 @@
       }
     },
     "date": "2026-11-09"
+  },
+  {
+    "src": "/gallery/heart-shaped-twig-flower-vases.jpeg",
+    "alt": "Three heart-shaped twig frames holding small flower vases with purple roses and greenery",
+    "title": "Heart-Shaped Twig Flower Vases",
+    "description": "A handmade wall decoration with three heart-shaped twig frames, small flower vases, purple roses, greenery, and lace bows.",
+    "mainCategory": "Decorations",
+    "tags": [
+      "Home Decor"
+    ],
+    "translations": {
+      "de": {
+        "title": "Herzförmige Zweigvasen mit Blumen",
+        "alt": "Drei herzförmige Zweigrahmen mit kleinen Blumenvasen, violetten Rosen und Grün",
+        "description": "Handgemachte Wanddekoration mit drei herzförmigen Zweigrahmen, kleinen Blumenvasen, violetten Rosen, Grün und Spitzenbändern."
+      }
+    },
+    "date": "2026-11-10"
+  },
+  {
+    "src": "/gallery/crocheted-hearts-keychains.jpeg",
+    "alt": "Three small crocheted hearts in soft green, blue, and gray yarn",
+    "title": "Crocheted Hearts",
+    "description": "Three handmade crochet hearts in muted green, blue, and gray yarn, shown together on a wooden surface.",
+    "mainCategory": "Decorations",
+    "tags": [
+      "Crochet"
+    ],
+    "translations": {
+      "de": {
+        "title": "Gehäkelte Herzen",
+        "alt": "Drei kleine gehäkelte Herzen aus weicher Wolle in sanftem Grün, Blau und Grau",
+        "description": "Drei handgehäkelte Herzen aus Wolle in gedecktem Grün, Blau und Grau, zusammen auf einer Holzoberfläche arrangiert."
+      }
+    },
+    "date": "2026-11-10"
+  },
+  {
+    "src": "/gallery/colorful-friendship-bracelets.jpeg",
+    "alt": "A row of colorful handmade woven friendship bracelets displayed on a black stand",
+    "title": "Colorful Friendship Bracelets",
+    "description": "A colorful assortment of handmade woven friendship bracelets with varied patterns and bright threads.",
+    "mainCategory": "Jewelry",
+    "tags": [
+      "Bracelets"
+    ],
+    "translations": {
+      "de": {
+        "title": "Bunte Freundschaftsarmbänder",
+        "alt": "Reihe bunter handgewebter Freundschaftsarmbänder auf einem schwarzen Ständer",
+        "description": "Eine bunte Auswahl handgewebter Freundschaftsarmbänder mit verschiedenen Mustern und kräftigen Garnfarben."
+      }
+    },
+    "date": "2026-11-10"
+  },
+  {
+    "src": "/gallery/heart-shaped-wall-flower-decor.jpeg",
+    "alt": "Heart-shaped twig frames with small purple rose arrangements and warm string lights on a wall",
+    "title": "Heart-Shaped Wall Flower Decor",
+    "description": "A wall display of heart-shaped twig frames holding small rose arrangements, accented with warm string lights.",
+    "mainCategory": "Decorations",
+    "tags": [
+      "Home Decor"
+    ],
+    "translations": {
+      "de": {
+        "title": "Herzförmige Wanddeko mit Blumen",
+        "alt": "Herzförmige Zweigrahmen mit kleinen violetten Rosenarrangements und warmen Lichterketten an der Wand",
+        "description": "Wanddekoration aus herzförmigen Zweigrahmen mit kleinen Rosenarrangements und warmen Lichterketten."
+      }
+    },
+    "date": "2026-11-10"
+  },
+  {
+    "src": "/gallery/woven-friendship-bracelets.jpeg",
+    "alt": "Close-up of colorful handmade friendship bracelets woven with geometric and heart patterns",
+    "title": "Woven Friendship Bracelets",
+    "description": "A close-up view of colorful handwoven friendship bracelets, showing their geometric designs and small heart motifs.",
+    "mainCategory": "Jewelry",
+    "tags": [
+      "Bracelets"
+    ],
+    "translations": {
+      "de": {
+        "title": "Gewebte Freundschaftsarmbänder",
+        "alt": "Nahaufnahme bunter handgewebter Freundschaftsarmbänder mit geometrischen Mustern und kleinen Herzen",
+        "description": "Nahaufnahme bunter handgewebter Freundschaftsarmbänder mit geometrischen Mustern und kleinen Herzmotiven."
+      }
+    },
+    "date": "2026-11-10"
+  },
+  {
+    "src": "/gallery/friendship-bracelets-display.jpeg",
+    "alt": "Many colorful handmade woven friendship bracelets arranged on a three-tier black display stand",
+    "title": "Friendship Bracelets Display",
+    "description": "A collection of handmade woven friendship bracelets in colorful patterns, arranged on a three-tier display stand.",
+    "mainCategory": "Jewelry",
+    "tags": [
+      "Bracelets"
+    ],
+    "translations": {
+      "de": {
+        "title": "Freundschaftsarmbänder auf dem Ständer",
+        "alt": "Viele bunte handgewebte Freundschaftsarmbänder auf einem schwarzen dreistöckigen Präsentationsständer",
+        "description": "Eine Auswahl handgewebter Freundschaftsarmbänder in bunten Mustern auf einem dreistöckigen Präsentationsständer."
+      }
+    },
+    "date": "2026-11-10"
+  },
+  {
+    "src": "/gallery/crochet-hearts-keychains.jpeg",
+    "alt": "A pair of dangling keychains with handmade pale green and lavender crocheted heart pendants",
+    "title": "Crochet Heart Keychains",
+    "description": "A pair of handmade dangling keychains with two-tone crocheted heart pendants, displayed with a matching crocheted heart and dried flowers.",
+    "mainCategory": "Jewelry",
+    "tags": [
+      "Earrings"
+    ],
+    "translations": {
+      "de": {
+        "title": "Ohrringe mit gehäkelten Herzen",
+        "alt": "Ein Paar Hängeohrringe mit handgemachten gehäkelten Herzanhängern in hellem Grün und Lavendel",
+        "description": "Ein Paar handgemachte Hängeohrringe mit zweifarbigen gehäkelten Herzanhängern, arrangiert mit einem passenden gehäkelten Herz und Trockenblumen."
+      }
+    },
+    "date": "2026-11-10"
   }
 ]
