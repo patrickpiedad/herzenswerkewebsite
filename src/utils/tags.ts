@@ -21,7 +21,7 @@ const germanTags: Record<string, string> = {
   'Home Decor': 'Wohndekoration',
   Crochet: 'Häkeln',
   Bracelets: 'Armbänder',
-  Earrings: 'Ohrringe',
+  Keychains: 'Schlüsselanhänger',
   'Behind the Scenes': 'Ein Blick hinter die Kulissen',
   Kitchen: 'Küche',
   'Living Room': 'Wohnzimmer',

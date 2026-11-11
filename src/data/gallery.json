@@ -1188,20 +1188,20 @@
     "date": "2026-11-10"
   },
   {
-    "src": "/gallery/crochet-mouse-earring.jpeg",
-    "alt": "A handmade crocheted blue mouse earring displayed beside a ball of blue yarn and a crochet hook",
-    "title": "Crochet Mouse Earring",
-    "description": "A whimsical handmade earring featuring a tiny crocheted blue mouse, shown with its matching yarn and crochet hook.",
-    "mainCategory": "Jewelry",
+    "src": "/gallery/crochet-mouse-keychain.jpeg",
+    "alt": "A crocheted blue mouse keychain displayed beside a ball of blue yarn and a crochet hook",
+    "title": "Crochet Mouse Keychain",
+    "description": "A whimsical handmade keychain featuring a tiny crocheted blue mouse, shown with its matching yarn and crochet hook.",
+    "mainCategory": "Decorations",
     "tags": [
-      "Earrings",
+      "Keychains",
       "Crochet"
     ],
     "translations": {
       "de": {
-        "title": "Gehäkelter Mäuse-Ohrring",
-        "alt": "Handgemachter gehäkelter blauer Mäuse-Ohrring neben passendem Garn und einer Häkelnadel",
-        "description": "Verspielter handgemachter Ohrring mit einer kleinen gehäkelten blauen Maus, zusammen mit passendem Garn und Häkelnadel."
+        "title": "Gehäkelter Mäuse-Schlüsselanhänger",
+        "alt": "Gehäkelter blauer Mäuse-Schlüsselanhänger neben passendem Garn und einer Häkelnadel",
+        "description": "Verspielter handgemachter Schlüsselanhänger mit einer kleinen gehäkelten blauen Maus, zusammen mit passendem Garn und Häkelnadel."
       }
     },
     "date": "2026-11-11"
