@@ -1186,5 +1186,42 @@
       }
     },
     "date": "2026-11-10"
+  },
+  {
+    "src": "/gallery/crochet-mouse-earring.jpeg",
+    "alt": "A handmade crocheted blue mouse earring displayed beside a ball of blue yarn and a crochet hook",
+    "title": "Crochet Mouse Earring",
+    "description": "A whimsical handmade earring featuring a tiny crocheted blue mouse, shown with its matching yarn and crochet hook.",
+    "mainCategory": "Jewelry",
+    "tags": [
+      "Earrings",
+      "Crochet"
+    ],
+    "translations": {
+      "de": {
+        "title": "Gehäkelter Mäuse-Ohrring",
+        "alt": "Handgemachter gehäkelter blauer Mäuse-Ohrring neben passendem Garn und einer Häkelnadel",
+        "description": "Verspielter handgemachter Ohrring mit einer kleinen gehäkelten blauen Maus, zusammen mit passendem Garn und Häkelnadel."
+      }
+    },
+    "date": "2026-11-11"
+  },
+  {
+    "src": "/gallery/crocheted-mouse.jpeg",
+    "alt": "A small gray crocheted mouse standing beside a ball of blue yarn and an orange crochet hook",
+    "title": "Crocheted Mouse",
+    "description": "A small handmade gray crocheted mouse posed beside blue yarn and an orange crochet hook.",
+    "mainCategory": "Decorations",
+    "tags": [
+      "Crochet"
+    ],
+    "translations": {
+      "de": {
+        "title": "Gehäkelte Maus",
+        "alt": "Kleine graue gehäkelte Maus neben einem Knäuel blauem Garn und einer orangefarbenen Häkelnadel",
+        "description": "Eine kleine handgemachte graue Häkelmaus neben blauem Garn und einer orangefarbenen Häkelnadel."
+      }
+    },
+    "date": "2026-11-11"
   }
 ]
