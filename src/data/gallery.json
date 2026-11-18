@@ -1223,5 +1223,114 @@
       }
     },
     "date": "2026-11-11"
+  },
+  {
+    "src": "/gallery/pyrography-cutting-board.jpeg",
+    "alt": "Wooden cutting board engraved with a mountain landscape and the name Patrick",
+    "title": "Pyrography Cutting Board",
+    "description": "A handmade wooden cutting board engraved with a detailed mountain landscape and the name Patrick.",
+    "mainCategory": "Decorations",
+    "tags": [
+      "Kitchen"
+    ],
+    "translations": {
+      "de": {
+        "title": "Schneidebrett mit Brandmalerei",
+        "alt": "Holzschneidebrett mit einer eingravierten Gebirgslandschaft und dem Namen Patrick",
+        "description": "Handgefertigtes Holzschneidebrett mit einer detaillierten Gebirgslandschaft und dem Namen Patrick."
+      }
+    },
+    "date": "2026-11-18"
+  },
+  {
+    "src": "/gallery/pyrography-candle-holder.jpeg",
+    "alt": "Wooden candle holder engraved with lettering and an evergreen tree",
+    "title": "Pyrography Candle Holder",
+    "description": "A round wooden candle holder decorated with hand-burned lettering and an evergreen tree.",
+    "mainCategory": "Decorations",
+    "tags": [
+      "Christmas",
+      "Home Decor"
+    ],
+    "translations": {
+      "de": {
+        "title": "Kerzenhalter mit Brandmalerei",
+        "alt": "Runder Holzkerzenhalter mit eingebrannter Schrift und einem Nadelbaum",
+        "description": "Runder Holzkerzenhalter mit handgebrannter Schrift und einem Nadelbaum."
+      }
+    },
+    "date": "2026-11-18"
+  },
+  {
+    "src": "/gallery/baby-clothes-watercolor-card.jpeg",
+    "alt": "Watercolor baby card with the name Johannes and colorful baby clothes",
+    "title": "Johannes Baby Card",
+    "description": "A handmade watercolor baby card featuring colorful little clothes and mountains for Johannes.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Babykarte für Johannes",
+        "alt": "Aquarell-Babykarte mit dem Namen Johannes und bunten Babyklamotten",
+        "description": "Handgemalte Aquarell-Babykarte mit bunten kleinen Kleidungsstücken und Bergen für Johannes."
+      }
+    },
+    "date": "2026-11-18"
+  },
+  {
+    "src": "/gallery/wedding-rings-card.jpeg",
+    "alt": "Watercolor wedding card with blank space and gold rings in green leaves",
+    "title": "Wedding Rings Card",
+    "description": "A watercolor wedding card with gold rings nestled among green leaves and berries.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Wedding"
+    ],
+    "translations": {
+      "de": {
+        "title": "Hochzeitskarte mit Trauringen",
+        "alt": "Aquarell-Hochzeitskarte mit goldenen Ringen in grünen Blättern",
+        "description": "Aquarell-Hochzeitskarte mit goldenen Trauringen, umgeben von grünen Blättern und Beeren."
+      }
+    },
+    "date": "2026-11-18"
+  },
+  {
+    "src": "/gallery/merry-christmas-card.jpeg",
+    "alt": "Small handmade Christmas card with a green partridge and the words Merry Christmas",
+    "title": "Merry Christmas Card",
+    "description": "A small handmade Christmas card with the words Merry Christmas and a whimsical green bird beside a snowman.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Christmas"
+    ],
+    "translations": {
+      "de": {
+        "title": "Merry-Christmas-Karte",
+        "alt": "Kleine handgemachte Weihnachtskarte mit einem grünen Vogel und dem Schriftzug Merry Christmas",
+        "description": "Kleine handgemachte Weihnachtskarte mit dem Schriftzug Merry Christmas und einem verspielten grünen Vogel neben einem Schneemann."
+      }
+    },
+    "date": "2026-11-18"
+  },
+  {
+    "src": "/gallery/wedding-congratulations-card.jpeg",
+    "alt": "Watercolor wedding card for Julia and Lukas with flowers and the German congratulations greeting",
+    "title": "Wedding Congratulations for Julia & Lukas",
+    "description": "A handmade watercolor wedding card with a leafy blue floral arrangement and the names Julia and Lukas.",
+    "mainCategory": "Cards",
+    "tags": [
+      "Wedding"
+    ],
+    "translations": {
+      "de": {
+        "title": "Hochzeitsglückwunsch für Julia und Lukas",
+        "alt": "Aquarell-Hochzeitskarte für Julia und Lukas mit Blumen und Herzlichen Glückwunsch",
+        "description": "Handgemalte Aquarell-Hochzeitskarte mit blauem Blumenarrangement und den Namen Julia und Lukas."
+      }
+    },
+    "date": "2026-11-18"
   }
 ]
