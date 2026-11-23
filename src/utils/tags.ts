@@ -17,6 +17,7 @@ const germanTags: Record<string, string> = {
   Everyday: 'Für jeden Tag',
   Graduation: 'Abschluss',
   'Happy New Year': 'Frohes neues Jahr',
+  'Thank You': 'Danke',
   Wedding: 'Hochzeit',
   'Home Decor': 'Wohndekoration',
   Crochet: 'Häkeln',

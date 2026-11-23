@@ -1008,9 +1008,9 @@
     "date": "2026-11-10"
   },
   {
-    "src": "/gallery/crochet-mouse-keychain.jpeg",
-    "alt": "A crocheted blue mouse keychain displayed beside a ball of blue yarn and a crochet hook",
-    "title": "Crochet Mouse Keychain",
+    "src": "/gallery/crochet-koala-keychain.jpeg",
+    "alt": "A crocheted blue koala keychain displayed beside a ball of blue yarn and a crochet hook",
+    "title": "Crochet Koala Keychain",
     "mainCategory": "Decorations",
     "tags": [
       "Keychains",
@@ -1018,24 +1018,24 @@
     ],
     "translations": {
       "de": {
-        "title": "Gehäkelter Mäuse-Schlüsselanhänger",
-        "alt": "Gehäkelter blauer Mäuse-Schlüsselanhänger neben passendem Garn und einer Häkelnadel"
+        "title": "Gehäkelter Koala-Schlüsselanhänger",
+        "alt": "Gehäkelter blauer Koala-Schlüsselanhänger neben passendem Garn und einer Häkelnadel"
       }
     },
     "date": "2026-11-11"
   },
   {
-    "src": "/gallery/crocheted-mouse.jpeg",
-    "alt": "A small gray crocheted mouse standing beside a ball of blue yarn and an orange crochet hook",
-    "title": "Crocheted Mouse",
+    "src": "/gallery/crocheted-elephant.jpeg",
+    "alt": "A small gray crocheted elephant standing beside a ball of blue yarn and an orange crochet hook",
+    "title": "Crocheted Elephant",
     "mainCategory": "Decorations",
     "tags": [
       "Crochet"
     ],
     "translations": {
       "de": {
-        "title": "Gehäkelte Maus",
-        "alt": "Kleine graue gehäkelte Maus neben einem Knäuel blauem Garn und einer orangefarbenen Häkelnadel"
+        "title": "Gehäkelter Elefant",
+        "alt": "Kleiner grauer gehäkelter Elefant neben einem Knäuel blauem Garn und einer orangefarbenen Häkelnadel"
       }
     },
     "date": "2026-11-11"
@@ -1136,5 +1136,69 @@
       }
     },
     "date": "2026-11-18"
+  },
+  {
+    "src": "/gallery/just-married-ramona-stefan.jpeg",
+    "alt": "Hand-painted wedding card showing a fitness-themed couple beside a Just Married car with their names",
+    "title": "Personalized Card 1",
+    "mainCategory": "Cards",
+    "tags": [
+      "Wedding"
+    ],
+    "translations": {
+      "de": {
+        "title": "Personalisierte Karte 1",
+        "alt": "Handgemalte Hochzeitskarte mit einem sportlichen Brautpaar und einem Just-Married-Auto mit ihren Namen"
+      }
+    },
+    "date": "2026-11-23"
+  },
+  {
+    "src": "/gallery/personalized-baby-card-mali.jpeg",
+    "alt": "Hand-painted welcome card for a baby named Mali, with a blue cloud and hanging animal and heart decorations",
+    "title": "Personalized Card 2",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Personalisierte Karte 2",
+        "alt": "Handgemalte Willkommenskarte zur Geburt mit einer blauen Wolke, daran hängenden Tieren und dem Namen Mali"
+      }
+    },
+    "date": "2026-11-23"
+  },
+  {
+    "src": "/gallery/personalized-baby-card-jonah.jpeg",
+    "alt": "Hand-painted baby card featuring a rocking horse, personalized with the name Jonah and the German phrase Große Abenteuer beginnen klein",
+    "title": "Personalized Card 3",
+    "mainCategory": "Cards",
+    "tags": [
+      "Baby"
+    ],
+    "translations": {
+      "de": {
+        "title": "Personalisierte Karte 3",
+        "alt": "Handgemalte Babykarte mit einem Schaukelpferd, dem Namen Jonah und dem Spruch „Große Abenteuer beginnen klein“"
+      }
+    },
+    "date": "2026-11-23"
+  },
+  {
+    "src": "/gallery/personalized-card-4-thank-you.jpeg",
+    "alt": "Hand-painted underwater thank-you card with the word Danke, a scuba diver, and a sea turtle",
+    "title": "Personalized Card 4",
+    "mainCategory": "Cards",
+    "tags": [
+      "Thank You"
+    ],
+    "translations": {
+      "de": {
+        "title": "Personalisierte Karte 4",
+        "alt": "Handgemalte Dankeskarte mit dem Schriftzug „Danke“, einem Taucher und einer Meeresschildkröte unter Wasser"
+      }
+    },
+    "date": "2026-11-23"
   }
 ]
