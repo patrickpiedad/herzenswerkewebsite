@@ -28,14 +28,12 @@ const gallery = defineCollection({
     src: z.string(),
     alt: z.string(),
     title: z.string(),
-    description: z.string(),
     mainCategory: z.string(),
     tags: z.array(z.string()).default([]),
     translations: z.object({
       de: z.object({
         title: z.string(),
         alt: z.string(),
-        description: z.string(),
       }).optional(),
     }).optional(),
     date: z.string(),

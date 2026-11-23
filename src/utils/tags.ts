@@ -31,7 +31,7 @@ const germanTags: Record<string, string> = {
 const germanCategories: Record<string, string> = {
   Cards: 'Karten',
   Decorations: 'Dekorationen',
-  Jewelry: 'Schmuck',
+  'Needle & Thread': 'Mit Nadel & Faden',
 };
 
 export function germanTag(tag: string): string {

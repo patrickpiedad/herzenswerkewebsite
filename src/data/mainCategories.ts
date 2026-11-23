@@ -14,10 +14,10 @@ export const mainCategories = [
     descriptionDe: 'Handgemachte Deko für Zuhause, den Garten und besondere Anlässe.',
   },
   {
-    name: 'Jewelry',
-    nameDe: 'Schmuck',
+    name: 'Needle & Thread',
+    nameDe: 'Mit Nadel & Faden',
     slug: 'jewelry',
-    description: 'Handmade jewelry and wearable pieces.',
-    descriptionDe: 'Handgemachter Schmuck und liebevoll gestaltete Accessoires.',
+    description: 'Handmade thread creations, including woven friendship bracelets.',
+    descriptionDe: 'Handgefertigte Arbeiten aus Garn, darunter gewebte Freundschaftsarmbänder.',
   },
 ] as const;
