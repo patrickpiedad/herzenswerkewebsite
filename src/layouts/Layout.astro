@@ -16,7 +16,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -71,16 +71,39 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
           type="button"
           data-en="DE"
           data-de="EN"
-          aria-label="Switch language to German"
+          aria-label="Sprache zu Englisch wechseln"
           data-en-label="Switch language to German"
-          data-de-label="Switch language to English"
+          data-de-label="Sprache zu Englisch wechseln"
           class="inline-flex h-10 min-w-10 items-center justify-center rounded-full bg-paper-2 px-3 text-xs font-medium tracking-wide text-ink transition-colors duration-200 hover:opacity-90"
         >
-          DE
+          EN
         </button>
         <ThemeToggle />
       </div>
     </div>
+
+    <button
+      id="back-to-top"
+      type="button"
+      aria-label="Nach oben"
+      data-en-label="Scroll to top"
+      data-de-label="Nach oben"
+      class="fixed right-6 bottom-6 z-20 inline-flex size-11 items-center justify-center rounded-full bg-paper-2 text-ink shadow-lg transition-colors duration-200 hover:opacity-90"
+      hidden
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 3a1 1 0 01.707.293l5 5a1 1 0 01-1.414 1.414L11 6.414V16a1 1 0 11-2 0V6.414L5.707 9.707a1 1 0 01-1.414-1.414l5-5A1 1 0 0110 3z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
 
     <header class="border-b border-rule bg-paper">
       <nav
@@ -150,7 +173,7 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
     <script is:inline>
       (() => {
         const getLanguage = () =>
-          localStorage.getItem('language') === 'de' ? 'de' : 'en';
+          localStorage.getItem('language') === 'en' ? 'en' : 'de';
 
         const applyLanguage = (language) => {
           document.documentElement.lang = language;
@@ -169,15 +192,33 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
         };
 
         document.addEventListener('click', (event) => {
-          if (event.target instanceof Element && event.target.closest('#language-toggle')) {
+          if (!(event.target instanceof Element)) return;
+
+          if (event.target.closest('#language-toggle')) {
             const language = getLanguage() === 'en' ? 'de' : 'en';
             localStorage.setItem('language', language);
             applyLanguage(language);
           }
+
+          if (event.target.closest('#back-to-top')) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
         });
 
-        document.addEventListener('astro:page-load', () => applyLanguage(getLanguage()));
-        document.addEventListener('DOMContentLoaded', () => applyLanguage(getLanguage()));
+        const updateBackToTopVisibility = () => {
+          const button = document.getElementById('back-to-top');
+          if (button) button.hidden = window.scrollY < 300;
+        };
+
+        window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+        document.addEventListener('astro:page-load', () => {
+          applyLanguage(getLanguage());
+          updateBackToTopVisibility();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+          applyLanguage(getLanguage());
+          updateBackToTopVisibility();
+        });
       })();
     </script>
   </body>
